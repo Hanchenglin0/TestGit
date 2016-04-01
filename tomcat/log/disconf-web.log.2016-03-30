@@ -1,0 +1,938 @@
+ 2016-03-30 11:56:34,962 [localhost-startStop-1] INFO  com.baidu.dsp.common.listener.StartupListener - Load StartupListener start...
+ 2016-03-30 11:56:34,972 [localhost-startStop-1] INFO  com.baidu.dsp.common.listener.StartupListener - Load StartupListener end...
+ 2016-03-30 11:56:40,986 [localhost-startStop-1] INFO  com.github.knightliao.apollo.redis.RedisClient - New Jedis pool <client: BeidouRedis1> <server: 127.0.0.1:6379> object created. Connection pool will be initiated when calling.
+ 2016-03-30 11:56:41,085 [localhost-startStop-1] INFO  com.github.knightliao.apollo.redis.RedisClient - New Jedis pool <client: BeidouRedis2> <server: 127.0.0.1:6380> object created. Connection pool will be initiated when calling.
+ 2016-03-30 11:56:43,486 [localhost-startStop-1-EventThread] INFO  com.baidu.disconf.core.common.zookeeper.inner.ConnectionWatcher - zk SyncConnected
+ 2016-03-30 11:56:43,572 [localhost-startStop-1] INFO  com.baidu.disconf.core.common.zookeeper.inner.ConnectionWatcher - zookeeper: 172.20.20.203:2181 , connected.
+ 2016-03-30 11:56:43,573 [localhost-startStop-1] INFO  com.baidu.disconf.core.common.zookeeper.ZookeeperMgr - zoo prefix: /disconf
+ 2016-03-30 11:56:46,731 [localhost-startStop-1] INFO  com.baidu.dsp.common.listener.ContextListener - start to load ContextListener
+ 2016-03-30 11:56:46,731 [localhost-startStop-1] INFO  com.baidu.dsp.common.listener.ContextListener - end of ContextListener
+9c9545e2-9a54-4034-b265-1a56b6872665 2016-03-30 11:56:47,655 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+9c9545e2-9a54-4034-b265-1a56b6872665 2016-03-30 11:56:47,678 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=9c9545e2-9a54-4034-b265-1a56b6872665, success=false]
+2a2eb208-8ba1-4dab-bb46-3fcc53e0b461 2016-03-30 11:56:57,018 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/signin
+2a2eb208-8ba1-4dab-bb46-3fcc53e0b461 2016-03-30 11:56:57,566 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.auth.UserController - com.baidu.disconf.web.service.sign.form.SigninForm@6d1f7b3a
+2a2eb208-8ba1-4dab-bb46-3fcc53e0b461 2016-03-30 11:57:26,474 [http-bio-18080-exec-2] WARN  com.baidu.dsp.common.handler.MyExceptionHandler - /api/account/signin ExceptionHandler FOUND. org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!	java.sql.SQLException: Connections could not be acquired from the underlying database!
+2a2eb208-8ba1-4dab-bb46-3fcc53e0b461 2016-03-30 11:57:26,487 [http-bio-18080-exec-2] WARN  com.baidu.dsp.common.handler.MyExceptionHandler - details: 
+org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:630) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:695) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:727) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:737) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:787) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at com.baidu.unbiz.common.genericdao.dao.GenericDao.findBySQL(GenericDao.java:454) ~[GenericDao.class:na]
+	at com.baidu.unbiz.common.genericdao.dao.GenericDao.findBySQL(GenericDao.java:422) ~[GenericDao.class:na]
+	at com.baidu.unbiz.common.genericdao.dao.GenericDao.find(GenericDao.java:347) ~[GenericDao.class:na]
+	at com.baidu.unbiz.common.genericdao.dao.GenericDao.findOne(GenericDao.java:379) ~[GenericDao.class:na]
+	at com.baidu.disconf.web.service.user.dao.impl.UserDaoImpl.getUserByName(UserDaoImpl.java:30) ~[UserDaoImpl.class:na]
+	at com.baidu.disconf.web.service.sign.service.impl.SignMgrImpl.getUserByName(SignMgrImpl.java:40) ~[SignMgrImpl.class:na]
+	at com.baidu.disconf.web.service.sign.service.impl.SignMgrImpl$$FastClassBySpringCGLIB$$4f4798c8.invoke(<generated>) ~[spring-core-4.1.7.RELEASE.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:717) ~[spring-aop-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99) ~[spring-tx-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281) ~[spring-tx-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96) ~[spring-tx-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:653) ~[spring-aop-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at com.baidu.disconf.web.service.sign.service.impl.SignMgrImpl$$EnhancerBySpringCGLIB$$c4bbed71.getUserByName(<generated>) ~[spring-core-4.1.7.RELEASE.jar:na]
+	at com.baidu.disconf.web.web.auth.validator.AuthValidator.validateLogin(AuthValidator.java:35) ~[AuthValidator.class:na]
+	at com.baidu.disconf.web.web.auth.UserController.signin(UserController.java:90) ~[UserController.class:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_80]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_80]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_80]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[na:1.7.0_80]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137) ~[spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110) ~[spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:705) ~[spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959) [spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893) [spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967) [spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:869) [spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:646) [servlet-api.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843) [spring-webmvc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727) [servlet-api.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303) [catalina.jar:7.0.59]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208) [catalina.jar:7.0.59]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat7-websocket.jar:7.0.59]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241) [catalina.jar:7.0.59]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208) [catalina.jar:7.0.59]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:85) [spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241) [catalina.jar:7.0.59]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208) [catalina.jar:7.0.59]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) [spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241) [catalina.jar:7.0.59]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208) [catalina.jar:7.0.59]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220) [catalina.jar:7.0.59]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122) [catalina.jar:7.0.59]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504) [catalina.jar:7.0.59]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170) [catalina.jar:7.0.59]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103) [catalina.jar:7.0.59]
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950) [catalina.jar:7.0.59]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116) [catalina.jar:7.0.59]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421) [catalina.jar:7.0.59]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074) [tomcat-coyote.jar:7.0.59]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611) [tomcat-coyote.jar:7.0.59]
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:314) [tomcat-coyote.jar:7.0.59]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-coyote.jar:7.0.59]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+Caused by: java.sql.SQLException: Connections could not be acquired from the underlying database!
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:106) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:529) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:128) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:164) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[spring-jdbc-4.1.7.RELEASE.jar:4.1.7.RELEASE]
+	... 68 common frames omitted
+Caused by: com.mchange.v2.resourcepool.CannotAcquireResourceException: A ResourcePool could not acquire a resource from its primary factory or source.
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1319) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:557) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:477) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:525) ~[c3p0-0.9.1.2.jar:0.9.1.2]
+	... 72 common frames omitted
+2a2eb208-8ba1-4dab-bb46-3fcc53e0b461 2016-03-30 11:57:26,488 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=服务器内部错误}, sessionId=2a2eb208-8ba1-4dab-bb46-3fcc53e0b461, success=false]
+d3c0628a-897e-4919-8522-f78295a58837 2016-03-30 11:59:03,469 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/signin
+d3c0628a-897e-4919-8522-f78295a58837 2016-03-30 11:59:03,475 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.auth.UserController - com.baidu.disconf.web.service.sign.form.SigninForm@65659674
+d3c0628a-897e-4919-8522-f78295a58837 2016-03-30 11:59:03,814 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+b2c93330-0d7d-497c-a0b4-50b068ec17d4 2016-03-30 11:59:04,159 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+b2c93330-0d7d-497c-a0b4-50b068ec17d4 2016-03-30 11:59:04,161 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+580d3ae1-b222-4196-bb76-207942a9fcce 2016-03-30 11:59:04,209 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+580d3ae1-b222-4196-bb76-207942a9fcce 2016-03-30 11:59:04,256 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.impl.RoleResourceMgrImpl - Querying role_resource table to get all...
+d0f07ae0-9d0f-4381-a57c-11f9fbdade0a 2016-03-30 11:59:04,271 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+d0f07ae0-9d0f-4381-a57c-11f9fbdade0a 2016-03-30 11:59:04,276 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.impl.RoleResourceMgrImpl - Querying role_resource table to get all...
+580d3ae1-b222-4196-bb76-207942a9fcce 2016-03-30 11:59:04,325 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+d0f07ae0-9d0f-4381-a57c-11f9fbdade0a 2016-03-30 11:59:04,344 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+d0f07ae0-9d0f-4381-a57c-11f9fbdade0a 2016-03-30 11:59:04,407 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=d0f07ae0-9d0f-4381-a57c-11f9fbdade0a, success=true]
+580d3ae1-b222-4196-bb76-207942a9fcce 2016-03-30 11:59:04,444 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=580d3ae1-b222-4196-bb76-207942a9fcce, success=true]
+5c9b5cd8-5be8-4149-a998-4335c693c24a 2016-03-30 11:59:07,487 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+5c9b5cd8-5be8-4149-a998-4335c693c24a 2016-03-30 11:59:07,509 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+5c9b5cd8-5be8-4149-a998-4335c693c24a 2016-03-30 11:59:07,548 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=1]
+5c9b5cd8-5be8-4149-a998-4335c693c24a 2016-03-30 11:59:07,581 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=5c9b5cd8-5be8-4149-a998-4335c693c24a, success=true]
+b9d8047a-89b1-4999-829b-502338aa8f8d 2016-03-30 11:59:10,154 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+b9d8047a-89b1-4999-829b-502338aa8f8d 2016-03-30 11:59:10,158 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+b9d8047a-89b1-4999-829b-502338aa8f8d 2016-03-30 11:59:10,159 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=3]
+b9d8047a-89b1-4999-829b-502338aa8f8d 2016-03-30 11:59:10,162 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=b9d8047a-89b1-4999-829b-502338aa8f8d, success=true]
+e0257734-559e-4425-8684-91449ecfec74 2016-03-30 11:59:14,332 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+e0257734-559e-4425-8684-91449ecfec74 2016-03-30 11:59:14,336 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e0257734-559e-4425-8684-91449ecfec74 2016-03-30 11:59:14,337 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=1]
+e0257734-559e-4425-8684-91449ecfec74 2016-03-30 11:59:14,343 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=e0257734-559e-4425-8684-91449ecfec74, success=true]
+cd9ac7f9-a1ea-4154-a46e-c7a6f92ca4db 2016-03-30 11:59:14,995 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+cd9ac7f9-a1ea-4154-a46e-c7a6f92ca4db 2016-03-30 11:59:14,999 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+cd9ac7f9-a1ea-4154-a46e-c7a6f92ca4db 2016-03-30 11:59:15,000 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=2]
+cd9ac7f9-a1ea-4154-a46e-c7a6f92ca4db 2016-03-30 11:59:15,010 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=cd9ac7f9-a1ea-4154-a46e-c7a6f92ca4db, success=true]
+5cea4f53-de8b-4392-938d-2484d4410f06 2016-03-30 11:59:15,646 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+5cea4f53-de8b-4392-938d-2484d4410f06 2016-03-30 11:59:15,651 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+5cea4f53-de8b-4392-938d-2484d4410f06 2016-03-30 11:59:15,652 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=3]
+5cea4f53-de8b-4392-938d-2484d4410f06 2016-03-30 11:59:15,656 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=5cea4f53-de8b-4392-938d-2484d4410f06, success=true]
+e36d4a3e-42db-44ec-9a6c-5c9ce70058ad 2016-03-30 11:59:16,152 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+e36d4a3e-42db-44ec-9a6c-5c9ce70058ad 2016-03-30 11:59:16,159 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e36d4a3e-42db-44ec-9a6c-5c9ce70058ad 2016-03-30 11:59:16,159 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=4]
+e36d4a3e-42db-44ec-9a6c-5c9ce70058ad 2016-03-30 11:59:16,168 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=e36d4a3e-42db-44ec-9a6c-5c9ce70058ad, success=true]
+79666c6e-1b4d-447f-a34f-9a75df789819 2016-03-30 12:27:36,514 [proScheduler-1] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+340bc8e9-41a6-40f9-a24c-4b9b2870425a 2016-03-30 12:57:46,621 [proScheduler-2] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+060c636c-107b-42b3-8988-59786c35e2e8 2016-03-30 13:27:56,680 [proScheduler-1] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+d7e54bf4-9dce-4b7c-bcb5-479eb062081b 2016-03-30 13:40:43,649 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+d7e54bf4-9dce-4b7c-bcb5-479eb062081b 2016-03-30 13:40:43,652 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=d7e54bf4-9dce-4b7c-bcb5-479eb062081b, success=false]
+fddf4a4d-c1ec-4137-91c8-bc8c57394e78 2016-03-30 13:40:49,968 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+fddf4a4d-c1ec-4137-91c8-bc8c57394e78 2016-03-30 13:40:49,969 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=fddf4a4d-c1ec-4137-91c8-bc8c57394e78, success=false]
+de089530-403a-482f-b99b-78b83a4bcc57 2016-03-30 13:40:51,506 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+de089530-403a-482f-b99b-78b83a4bcc57 2016-03-30 13:40:51,508 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=de089530-403a-482f-b99b-78b83a4bcc57, success=false]
+5038c715-7923-41db-abbe-8709d9ec1b9d 2016-03-30 13:41:14,599 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+5038c715-7923-41db-abbe-8709d9ec1b9d 2016-03-30 13:41:14,600 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=5038c715-7923-41db-abbe-8709d9ec1b9d, success=false]
+6fc639a9-a32f-4f1d-8df4-749a49759337 2016-03-30 13:41:27,020 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+8132622f-7ece-4402-abb0-ead88365a9f9 2016-03-30 13:41:27,020 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+6fc639a9-a32f-4f1d-8df4-749a49759337 2016-03-30 13:41:27,020 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=6fc639a9-a32f-4f1d-8df4-749a49759337, success=false]
+8132622f-7ece-4402-abb0-ead88365a9f9 2016-03-30 13:41:27,021 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=8132622f-7ece-4402-abb0-ead88365a9f9, success=false]
+20a42b8d-6db5-4718-9b09-1fcac3d65723 2016-03-30 13:41:27,039 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+20a42b8d-6db5-4718-9b09-1fcac3d65723 2016-03-30 13:41:27,042 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=20a42b8d-6db5-4718-9b09-1fcac3d65723, success=false]
+2fb97ff8-b87a-4c10-bc01-40592cd75c10 2016-03-30 13:41:27,262 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+2fb97ff8-b87a-4c10-bc01-40592cd75c10 2016-03-30 13:41:27,263 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=2fb97ff8-b87a-4c10-bc01-40592cd75c10, success=false]
+b8cdafbe-396c-4794-945b-ee9ba527aedd 2016-03-30 13:41:36,850 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/signin
+b8cdafbe-396c-4794-945b-ee9ba527aedd 2016-03-30 13:41:36,855 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.auth.UserController - com.baidu.disconf.web.service.sign.form.SigninForm@7c3ad090
+b8cdafbe-396c-4794-945b-ee9ba527aedd 2016-03-30 13:41:36,861 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+4cc9e925-6c6d-4aa6-81aa-69e534093725 2016-03-30 13:41:37,026 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+e83c18be-bbbd-4b39-a2f9-6ca705006038 2016-03-30 13:41:37,027 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+4cc9e925-6c6d-4aa6-81aa-69e534093725 2016-03-30 13:41:37,027 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+e83c18be-bbbd-4b39-a2f9-6ca705006038 2016-03-30 13:41:37,028 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e42bb311-8143-463b-b852-2638a4da2479 2016-03-30 13:41:37,029 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+e42bb311-8143-463b-b852-2638a4da2479 2016-03-30 13:41:37,030 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e83c18be-bbbd-4b39-a2f9-6ca705006038 2016-03-30 13:41:37,032 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=e83c18be-bbbd-4b39-a2f9-6ca705006038, success=true]
+e42bb311-8143-463b-b852-2638a4da2479 2016-03-30 13:41:37,032 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=e42bb311-8143-463b-b852-2638a4da2479, success=true]
+0e54ef30-45b1-4f04-905a-c5d9ebd494ad 2016-03-30 13:41:38,628 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+0e54ef30-45b1-4f04-905a-c5d9ebd494ad 2016-03-30 13:41:38,632 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0e54ef30-45b1-4f04-905a-c5d9ebd494ad 2016-03-30 13:41:38,633 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=1]
+0e54ef30-45b1-4f04-905a-c5d9ebd494ad 2016-03-30 13:41:38,636 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=0e54ef30-45b1-4f04-905a-c5d9ebd494ad, success=true]
+987f7be9-a32f-454b-8dc2-8d2a1b770cf0 2016-03-30 13:41:39,366 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+987f7be9-a32f-454b-8dc2-8d2a1b770cf0 2016-03-30 13:41:39,371 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+987f7be9-a32f-454b-8dc2-8d2a1b770cf0 2016-03-30 13:41:39,371 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=2]
+987f7be9-a32f-454b-8dc2-8d2a1b770cf0 2016-03-30 13:41:39,375 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=987f7be9-a32f-454b-8dc2-8d2a1b770cf0, success=true]
+e73165a3-9281-4baf-87a7-e661bef1c1d8 2016-03-30 13:41:39,751 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+e73165a3-9281-4baf-87a7-e661bef1c1d8 2016-03-30 13:41:39,756 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e73165a3-9281-4baf-87a7-e661bef1c1d8 2016-03-30 13:41:39,757 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=3]
+e73165a3-9281-4baf-87a7-e661bef1c1d8 2016-03-30 13:41:39,762 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=e73165a3-9281-4baf-87a7-e661bef1c1d8, success=true]
+cc463918-51c6-49b8-ae2d-b61fb0329c41 2016-03-30 13:41:40,128 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+cc463918-51c6-49b8-ae2d-b61fb0329c41 2016-03-30 13:41:40,131 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+cc463918-51c6-49b8-ae2d-b61fb0329c41 2016-03-30 13:41:40,132 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=3]
+cc463918-51c6-49b8-ae2d-b61fb0329c41 2016-03-30 13:41:40,136 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=cc463918-51c6-49b8-ae2d-b61fb0329c41, success=true]
+6f0eee04-09ad-400d-a89c-6208daf2f350 2016-03-30 13:43:47,896 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+6f0eee04-09ad-400d-a89c-6208daf2f350 2016-03-30 13:43:47,901 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+6f0eee04-09ad-400d-a89c-6208daf2f350 2016-03-30 13:43:47,902 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=3]
+6f0eee04-09ad-400d-a89c-6208daf2f350 2016-03-30 13:43:47,913 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=6f0eee04-09ad-400d-a89c-6208daf2f350, success=true]
+d304e84a-7151-4819-b881-13227870f188 2016-03-30 13:43:47,959 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+d304e84a-7151-4819-b881-13227870f188 2016-03-30 13:43:48,062 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=d304e84a-7151-4819-b881-13227870f188, success=false]
+cde2b8ca-0e9b-44df-87c5-b897762a068e 2016-03-30 13:43:50,192 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+cde2b8ca-0e9b-44df-87c5-b897762a068e 2016-03-30 13:43:50,196 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+cde2b8ca-0e9b-44df-87c5-b897762a068e 2016-03-30 13:43:50,197 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+cde2b8ca-0e9b-44df-87c5-b897762a068e 2016-03-30 13:43:50,209 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=cde2b8ca-0e9b-44df-87c5-b897762a068e, success=true]
+1f5f0019-6369-42a7-a4cf-20d6093298d9 2016-03-30 13:43:50,236 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+1f5f0019-6369-42a7-a4cf-20d6093298d9 2016-03-30 13:43:50,242 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+1f5f0019-6369-42a7-a4cf-20d6093298d9 2016-03-30 13:43:50,243 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+1f5f0019-6369-42a7-a4cf-20d6093298d9 2016-03-30 13:43:50,277 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=1f5f0019-6369-42a7-a4cf-20d6093298d9, success=true]
+012eaec6-5661-4793-9e25-beb1fc6178bd 2016-03-30 13:44:02,609 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/148
+012eaec6-5661-4793-9e25-beb1fc6178bd 2016-03-30 13:44:02,617 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+012eaec6-5661-4793-9e25-beb1fc6178bd 2016-03-30 13:44:02,634 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=148, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=autoconfig.properties, value=auto=bbdxxjdccd, createTime=20150320130619, modifyTime=201503202249]]
+00e3e78f-934b-40ab-b8cd-c3dcda74bc0b 2016-03-30 13:44:07,378 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/149
+00e3e78f-934b-40ab-b8cd-c3dcda74bc0b 2016-03-30 13:44:07,380 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+00e3e78f-934b-40ab-b8cd-c3dcda74bc0b 2016-03-30 13:44:07,388 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=149, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=autoconfig2.properties, value=auto2=cd, createTime=20150320130625, modifyTime=201503202038]]
+b42b4747-544b-4a41-b2a4-7b6fd7633836 2016-03-30 13:44:22,311 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+b42b4747-544b-4a41-b2a4-7b6fd7633836 2016-03-30 13:44:22,315 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+b42b4747-544b-4a41-b2a4-7b6fd7633836 2016-03-30 13:44:22,315 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=2]
+b42b4747-544b-4a41-b2a4-7b6fd7633836 2016-03-30 13:44:22,326 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=b42b4747-544b-4a41-b2a4-7b6fd7633836, success=true]
+167a469c-1db2-4e48-b5fb-1c0ca98a1b66 2016-03-30 13:44:22,412 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+167a469c-1db2-4e48-b5fb-1c0ca98a1b66 2016-03-30 13:44:22,419 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=167a469c-1db2-4e48-b5fb-1c0ca98a1b66, success=false]
+537eea4a-94b3-480c-bbf2-a40749311196 2016-03-30 13:44:24,252 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+537eea4a-94b3-480c-bbf2-a40749311196 2016-03-30 13:44:24,257 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+537eea4a-94b3-480c-bbf2-a40749311196 2016-03-30 13:44:24,258 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=3]
+537eea4a-94b3-480c-bbf2-a40749311196 2016-03-30 13:44:24,262 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=537eea4a-94b3-480c-bbf2-a40749311196, success=true]
+c08835a3-a4ec-429b-a1ec-ebd0a3baf951 2016-03-30 13:44:24,293 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+c08835a3-a4ec-429b-a1ec-ebd0a3baf951 2016-03-30 13:44:24,298 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=c08835a3-a4ec-429b-a1ec-ebd0a3baf951, success=false]
+c7205bf4-0070-4969-ba69-49a4332ff4d2 2016-03-30 13:44:25,080 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+c7205bf4-0070-4969-ba69-49a4332ff4d2 2016-03-30 13:44:25,085 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+c7205bf4-0070-4969-ba69-49a4332ff4d2 2016-03-30 13:44:25,086 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=4]
+c7205bf4-0070-4969-ba69-49a4332ff4d2 2016-03-30 13:44:25,091 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=c7205bf4-0070-4969-ba69-49a4332ff4d2, success=true]
+c2bbc901-1a3b-40d9-aebd-66ee91deda1f 2016-03-30 13:44:25,143 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+c2bbc901-1a3b-40d9-aebd-66ee91deda1f 2016-03-30 13:44:25,149 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=c2bbc901-1a3b-40d9-aebd-66ee91deda1f, success=false]
+15cf9fef-8460-4bdb-9507-4cbd24ff0724 2016-03-30 13:44:26,038 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+15cf9fef-8460-4bdb-9507-4cbd24ff0724 2016-03-30 13:44:26,045 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+15cf9fef-8460-4bdb-9507-4cbd24ff0724 2016-03-30 13:44:26,046 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+15cf9fef-8460-4bdb-9507-4cbd24ff0724 2016-03-30 13:44:26,054 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=15cf9fef-8460-4bdb-9507-4cbd24ff0724, success=true]
+77131d34-29e7-4b69-817b-e7250289225f 2016-03-30 13:44:26,075 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+77131d34-29e7-4b69-817b-e7250289225f 2016-03-30 13:44:26,082 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+77131d34-29e7-4b69-817b-e7250289225f 2016-03-30 13:44:26,082 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+77131d34-29e7-4b69-817b-e7250289225f 2016-03-30 13:44:26,105 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=77131d34-29e7-4b69-817b-e7250289225f, success=true]
+7f1aada9-075c-4349-838b-b4cd14257fa1 2016-03-30 13:44:29,303 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/12
+7f1aada9-075c-4349-838b-b4cd14257fa1 2016-03-30 13:44:29,306 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+7f1aada9-075c-4349-838b-b4cd14257fa1 2016-03-30 13:44:29,329 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=12, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=redis.properties, value=redis.host=127.0.0.1
+redis.port=6379, createTime=20140811172327, modifyTime=201410111542]]
+053ffbc2-904a-477d-b503-a9a0c0e83bc4 2016-03-30 13:44:35,715 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+053ffbc2-904a-477d-b503-a9a0c0e83bc4 2016-03-30 13:44:35,717 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+04daa881-000f-42fb-9867-ed1050dbf4ab 2016-03-30 13:44:35,721 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/12
+04daa881-000f-42fb-9867-ed1050dbf4ab 2016-03-30 13:44:35,724 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+04daa881-000f-42fb-9867-ed1050dbf4ab 2016-03-30 13:44:35,737 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=12, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=redis.properties, value=redis.host=127.0.0.1
+redis.port=6379, createTime=20140811172327, modifyTime=201410111542]]
+23c318bc-cda2-41d8-9f60-4117aca2b381 2016-03-30 13:44:35,773 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+23c318bc-cda2-41d8-9f60-4117aca2b381 2016-03-30 13:44:35,779 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+23c318bc-cda2-41d8-9f60-4117aca2b381 2016-03-30 13:44:35,779 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+23c318bc-cda2-41d8-9f60-4117aca2b381 2016-03-30 13:44:35,792 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=23c318bc-cda2-41d8-9f60-4117aca2b381, success=true]
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,439 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/filetext/12
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,448 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/filetext/{configId}/, method:PUT, UserId:6, RoleId:2, Is priviledged:true
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,487 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigUpdateController - receive file: redis.host=127.0.0.1
+redis.port=6380
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,591 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.utils.email.LogMailBean - send to 
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,592 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.utils.email.LogMailBean - title:  config update
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,592 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.utils.email.LogMailBean - contentConfig(type=0, status=1, name=redis.properties, value=redis.host=127.0.0.1
+redis.port=6379, appId=2, version=1_0_0_0, envId=1, createTime=20140811172327, updateTime=20141011154244)<br/><br/><br/>点击<a href='http://disconf.com/modifyFile.html?configId=12'> 这里 </a> 进入查看<br/><br/> <span style='color:#FF0000'>Change info: </span><br/>[position: 1, size: 1, lines: [redis.port=6380]]<br/><br/><br/><br/><span style='color:#FF0000'>Old value:</span><br/>redis.host=127.0.0.1<br/>redis.port=6379<br/><br/><br/><span style='color:#FF0000'>New value:</span><br/>redis.host=127.0.0.1<br/>redis.port=6380
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,600 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigUpdateController - update 12 ok
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,734 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.innerapi.zookeeper.impl.ZookeeperDriverImpl - /disconf/disconf_demo_1_0_0_0_rd/file/redis.properties not exist. not update ZK.
+a80b7342-de97-47eb-bac7-c200ac82069f 2016-03-30 13:45:03,735 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=修改成功，邮件发送失败，请检查邮箱配置]
+cf17d869-0b4b-4871-95d4-dd18f7ee7d7f 2016-03-30 13:45:03,770 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/12
+cf17d869-0b4b-4871-95d4-dd18f7ee7d7f 2016-03-30 13:45:03,773 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+cf17d869-0b4b-4871-95d4-dd18f7ee7d7f 2016-03-30 13:45:03,783 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=12, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=redis.properties, value=redis.host=127.0.0.1
+redis.port=6380, createTime=20140811172327, modifyTime=201603301345]]
+1d02597c-6811-47a2-8109-28efa23c4392 2016-03-30 13:45:03,803 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+1d02597c-6811-47a2-8109-28efa23c4392 2016-03-30 13:45:03,814 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+1d02597c-6811-47a2-8109-28efa23c4392 2016-03-30 13:45:03,814 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+1d02597c-6811-47a2-8109-28efa23c4392 2016-03-30 13:45:03,830 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=1d02597c-6811-47a2-8109-28efa23c4392, success=true]
+da419da0-12c5-4fe4-9229-76d8f5ba0fa9 2016-03-30 13:45:08,837 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+da419da0-12c5-4fe4-9229-76d8f5ba0fa9 2016-03-30 13:45:08,839 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+17d8d441-fbdf-4593-bebd-8a76548a479b 2016-03-30 13:45:08,843 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+17d8d441-fbdf-4593-bebd-8a76548a479b 2016-03-30 13:45:08,845 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+98a58a08-4733-4a36-888e-a3f17b2775cd 2016-03-30 13:45:08,847 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+17d8d441-fbdf-4593-bebd-8a76548a479b 2016-03-30 13:45:08,848 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=17d8d441-fbdf-4593-bebd-8a76548a479b, success=true]
+98a58a08-4733-4a36-888e-a3f17b2775cd 2016-03-30 13:45:08,848 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+98a58a08-4733-4a36-888e-a3f17b2775cd 2016-03-30 13:45:08,853 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=98a58a08-4733-4a36-888e-a3f17b2775cd, success=true]
+efc931bc-136e-4cc2-b1be-04bcb6e175d5 2016-03-30 13:45:10,711 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+efc931bc-136e-4cc2-b1be-04bcb6e175d5 2016-03-30 13:45:10,715 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+efc931bc-136e-4cc2-b1be-04bcb6e175d5 2016-03-30 13:45:10,715 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=null]
+efc931bc-136e-4cc2-b1be-04bcb6e175d5 2016-03-30 13:45:10,725 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=efc931bc-136e-4cc2-b1be-04bcb6e175d5, success=true]
+8130d4d6-92e0-402b-901a-3ae3f11d7b22 2016-03-30 13:45:12,029 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+8130d4d6-92e0-402b-901a-3ae3f11d7b22 2016-03-30 13:45:12,038 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+8130d4d6-92e0-402b-901a-3ae3f11d7b22 2016-03-30 13:45:12,039 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+8130d4d6-92e0-402b-901a-3ae3f11d7b22 2016-03-30 13:45:12,052 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=8130d4d6-92e0-402b-901a-3ae3f11d7b22, success=true]
+3070ba07-cf78-4c31-a653-e52190539359 2016-03-30 13:45:12,084 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+3070ba07-cf78-4c31-a653-e52190539359 2016-03-30 13:45:12,091 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+3070ba07-cf78-4c31-a653-e52190539359 2016-03-30 13:45:12,095 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+3070ba07-cf78-4c31-a653-e52190539359 2016-03-30 13:45:12,121 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=3070ba07-cf78-4c31-a653-e52190539359, success=true]
+16d9c325-2aad-42f7-8b6a-40cfacb0f4fa 2016-03-30 13:45:26,897 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/zk/12
+16d9c325-2aad-42f7-8b6a-40cfacb0f4fa 2016-03-30 13:45:26,903 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/zk/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+16d9c325-2aad-42f7-8b6a-40cfacb0f4fa 2016-03-30 13:45:26,922 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=MachineListVo [datalist=null, errorNum=0, machineSize=0]]
+13134c18-699e-465a-995c-d7984c12d6b5 2016-03-30 13:45:31,143 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/12
+13134c18-699e-465a-995c-d7984c12d6b5 2016-03-30 13:45:31,146 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+13134c18-699e-465a-995c-d7984c12d6b5 2016-03-30 13:45:31,158 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=12, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=redis.properties, value=redis.host=127.0.0.1
+redis.port=6380, createTime=20140811172327, modifyTime=201603301345]]
+7175caf2-c289-4c57-8a0c-274fa4514e54 2016-03-30 13:45:36,987 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+7175caf2-c289-4c57-8a0c-274fa4514e54 2016-03-30 13:45:36,992 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+7175caf2-c289-4c57-8a0c-274fa4514e54 2016-03-30 13:45:36,993 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=2]
+7175caf2-c289-4c57-8a0c-274fa4514e54 2016-03-30 13:45:36,997 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=7175caf2-c289-4c57-8a0c-274fa4514e54, success=true]
+8e0bf4ab-0284-4ac1-81c1-7534bb8b364f 2016-03-30 13:45:37,023 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+8e0bf4ab-0284-4ac1-81c1-7534bb8b364f 2016-03-30 13:45:37,030 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=8e0bf4ab-0284-4ac1-81c1-7534bb8b364f, success=false]
+0e606847-008f-42ee-91f7-4c8c3982798c 2016-03-30 13:45:38,754 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+0e606847-008f-42ee-91f7-4c8c3982798c 2016-03-30 13:45:38,759 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0e606847-008f-42ee-91f7-4c8c3982798c 2016-03-30 13:45:38,760 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=3]
+0e606847-008f-42ee-91f7-4c8c3982798c 2016-03-30 13:45:38,764 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=0e606847-008f-42ee-91f7-4c8c3982798c, success=true]
+3f9a0d6c-666f-4777-9a95-786d2eda7820 2016-03-30 13:45:38,797 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+3f9a0d6c-666f-4777-9a95-786d2eda7820 2016-03-30 13:45:38,803 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=3f9a0d6c-666f-4777-9a95-786d2eda7820, success=false]
+2c1b8da5-3d0c-48f0-9b7d-493bfc896324 2016-03-30 13:45:39,194 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+2c1b8da5-3d0c-48f0-9b7d-493bfc896324 2016-03-30 13:45:39,199 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+2c1b8da5-3d0c-48f0-9b7d-493bfc896324 2016-03-30 13:45:39,200 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=4]
+2c1b8da5-3d0c-48f0-9b7d-493bfc896324 2016-03-30 13:45:39,204 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=2c1b8da5-3d0c-48f0-9b7d-493bfc896324, success=true]
+ff90c34d-3dbe-4114-8624-556a65d69e9c 2016-03-30 13:45:39,246 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+ff90c34d-3dbe-4114-8624-556a65d69e9c 2016-03-30 13:45:39,254 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=ff90c34d-3dbe-4114-8624-556a65d69e9c, success=false]
+5be1b3f8-a12f-44ee-bdd0-6e35d3a0428c 2016-03-30 13:45:40,197 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+5be1b3f8-a12f-44ee-bdd0-6e35d3a0428c 2016-03-30 13:45:40,200 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+5be1b3f8-a12f-44ee-bdd0-6e35d3a0428c 2016-03-30 13:45:40,201 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+5be1b3f8-a12f-44ee-bdd0-6e35d3a0428c 2016-03-30 13:45:40,209 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=5be1b3f8-a12f-44ee-bdd0-6e35d3a0428c, success=true]
+2014f34a-6c63-4c61-a7e1-5ef52ed70ab4 2016-03-30 13:45:40,234 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+2014f34a-6c63-4c61-a7e1-5ef52ed70ab4 2016-03-30 13:45:40,241 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+2014f34a-6c63-4c61-a7e1-5ef52ed70ab4 2016-03-30 13:45:40,242 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+2014f34a-6c63-4c61-a7e1-5ef52ed70ab4 2016-03-30 13:45:40,261 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=2014f34a-6c63-4c61-a7e1-5ef52ed70ab4, success=true]
+d91d91df-b893-401f-aaaa-a27b486dab07 2016-03-30 13:45:47,758 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+d91d91df-b893-401f-aaaa-a27b486dab07 2016-03-30 13:45:47,764 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+d91d91df-b893-401f-aaaa-a27b486dab07 2016-03-30 13:45:47,765 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+d91d91df-b893-401f-aaaa-a27b486dab07 2016-03-30 13:45:47,780 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=d91d91df-b893-401f-aaaa-a27b486dab07, success=true]
+e02e826d-36e8-4585-9e80-19f9c2051279 2016-03-30 13:45:54,350 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/143
+e02e826d-36e8-4585-9e80-19f9c2051279 2016-03-30 13:45:54,354 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e02e826d-36e8-4585-9e80-19f9c2051279 2016-03-30 13:45:54,368 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=143, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=testXml2.xml, value=<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route sourceHost="*" sourcePort="*"
+        proxyHost="127.0.0.1" proxyPort="8081">
+        <rule>
+            <from method="get">/tradeMap</from>
+            <to method="get">/tradeMap</to>
+        </rule>
+    </route>
+</routes>, createTime=20141110193605, modifyTime=201411101936]]
+cec32918-e7d0-4339-ab3d-10c5ffc1894b 2016-03-30 13:53:04,234 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/zkdeploy
+cec32918-e7d0-4339-ab3d-10c5ffc1894b 2016-03-30 13:53:04,278 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/zoo/zkdeploy/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+cec32918-e7d0-4339-ab3d-10c5ffc1894b 2016-03-30 13:53:04,311 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.zookeeper.controller.ZooController - ZkDeployForm [appId=2, version=1_0_0_0, envId=1]
+cec32918-e7d0-4339-ab3d-10c5ffc1894b 2016-03-30 13:53:04,338 [http-bio-18080-exec-8] ERROR com.baidu.disconf.web.innerapi.zookeeper.impl.ZookeeperDriverImpl - Group /disconf/disconf_demo_1_0_0_0_rd does not exist
+
+cec32918-e7d0-4339-ab3d-10c5ffc1894b 2016-03-30 13:53:04,340 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={hostInfo=})
+48bb23a3-1b2d-46ff-9915-1530810c9e90 2016-03-30 13:53:08,947 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+48bb23a3-1b2d-46ff-9915-1530810c9e90 2016-03-30 13:53:08,951 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+48bb23a3-1b2d-46ff-9915-1530810c9e90 2016-03-30 13:53:08,951 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=4]
+48bb23a3-1b2d-46ff-9915-1530810c9e90 2016-03-30 13:53:08,954 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=48bb23a3-1b2d-46ff-9915-1530810c9e90, success=true]
+6109ff72-af62-442c-94ca-30bc8dbc2b4c 2016-03-30 13:53:08,995 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+6109ff72-af62-442c-94ca-30bc8dbc2b4c 2016-03-30 13:53:09,001 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=6109ff72-af62-442c-94ca-30bc8dbc2b4c, success=false]
+f0b2400f-29b4-4497-b51b-df3b26087d55 2016-03-30 13:53:10,799 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+f0b2400f-29b4-4497-b51b-df3b26087d55 2016-03-30 13:53:10,803 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+f0b2400f-29b4-4497-b51b-df3b26087d55 2016-03-30 13:53:10,804 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=3]
+f0b2400f-29b4-4497-b51b-df3b26087d55 2016-03-30 13:53:10,807 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=f0b2400f-29b4-4497-b51b-df3b26087d55, success=true]
+1ca38bf3-f2d0-4abb-a63b-a285687556a8 2016-03-30 13:53:10,838 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+1ca38bf3-f2d0-4abb-a63b-a285687556a8 2016-03-30 13:53:10,849 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=1ca38bf3-f2d0-4abb-a63b-a285687556a8, success=false]
+3a643a53-a2e4-4f4d-b4a4-38b1d57e773d 2016-03-30 13:53:11,686 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+3a643a53-a2e4-4f4d-b4a4-38b1d57e773d 2016-03-30 13:53:11,690 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+3a643a53-a2e4-4f4d-b4a4-38b1d57e773d 2016-03-30 13:53:11,691 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=2]
+3a643a53-a2e4-4f4d-b4a4-38b1d57e773d 2016-03-30 13:53:11,694 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=3a643a53-a2e4-4f4d-b4a4-38b1d57e773d, success=true]
+63284234-e7cd-49bb-92f6-38f3e0190e77 2016-03-30 13:53:11,734 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+63284234-e7cd-49bb-92f6-38f3e0190e77 2016-03-30 13:53:11,741 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=63284234-e7cd-49bb-92f6-38f3e0190e77, success=false]
+a6d24690-821f-4057-bab6-6fd1f1592990 2016-03-30 13:53:12,574 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+a6d24690-821f-4057-bab6-6fd1f1592990 2016-03-30 13:53:12,579 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+a6d24690-821f-4057-bab6-6fd1f1592990 2016-03-30 13:53:12,579 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+a6d24690-821f-4057-bab6-6fd1f1592990 2016-03-30 13:53:12,590 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=a6d24690-821f-4057-bab6-6fd1f1592990, success=true]
+4c20c7e0-cbd0-405d-9640-2a98a4561ef1 2016-03-30 13:53:12,623 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+4c20c7e0-cbd0-405d-9640-2a98a4561ef1 2016-03-30 13:53:12,629 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+4c20c7e0-cbd0-405d-9640-2a98a4561ef1 2016-03-30 13:53:12,629 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+4c20c7e0-cbd0-405d-9640-2a98a4561ef1 2016-03-30 13:53:12,652 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=4c20c7e0-cbd0-405d-9640-2a98a4561ef1, success=true]
+697b3fcd-65de-440b-9369-6019f252860b 2016-03-30 13:53:12,708 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/zkdeploy
+697b3fcd-65de-440b-9369-6019f252860b 2016-03-30 13:53:12,718 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/zoo/zkdeploy/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+697b3fcd-65de-440b-9369-6019f252860b 2016-03-30 13:53:12,719 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.zookeeper.controller.ZooController - ZkDeployForm [appId=2, version=1_0_0_0, envId=1]
+697b3fcd-65de-440b-9369-6019f252860b 2016-03-30 13:53:12,732 [http-bio-18080-exec-7] ERROR com.baidu.disconf.web.innerapi.zookeeper.impl.ZookeeperDriverImpl - Group /disconf/disconf_demo_1_0_0_0_rd does not exist
+
+697b3fcd-65de-440b-9369-6019f252860b 2016-03-30 13:53:12,732 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={hostInfo=})
+9b2bc777-459c-4e3f-8aa9-19a9c9cf08bd 2016-03-30 13:53:15,926 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+9b2bc777-459c-4e3f-8aa9-19a9c9cf08bd 2016-03-30 13:53:15,931 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+9b2bc777-459c-4e3f-8aa9-19a9c9cf08bd 2016-03-30 13:53:15,931 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+9b2bc777-459c-4e3f-8aa9-19a9c9cf08bd 2016-03-30 13:53:15,940 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=9b2bc777-459c-4e3f-8aa9-19a9c9cf08bd, success=true]
+d65f3c99-0d0b-40bf-a9c5-1869bd29bdc9 2016-03-30 13:53:15,974 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+d65f3c99-0d0b-40bf-a9c5-1869bd29bdc9 2016-03-30 13:53:15,980 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+d65f3c99-0d0b-40bf-a9c5-1869bd29bdc9 2016-03-30 13:53:15,980 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+d65f3c99-0d0b-40bf-a9c5-1869bd29bdc9 2016-03-30 13:53:16,002 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=d65f3c99-0d0b-40bf-a9c5-1869bd29bdc9, success=true]
+5406c3d6-ba8e-4b3d-be5d-af0f689a6032 2016-03-30 13:53:16,034 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/zkdeploy
+5406c3d6-ba8e-4b3d-be5d-af0f689a6032 2016-03-30 13:53:16,039 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/zoo/zkdeploy/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+5406c3d6-ba8e-4b3d-be5d-af0f689a6032 2016-03-30 13:53:16,041 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.zookeeper.controller.ZooController - ZkDeployForm [appId=2, version=1_0_0_0, envId=1]
+5406c3d6-ba8e-4b3d-be5d-af0f689a6032 2016-03-30 13:53:16,057 [http-bio-18080-exec-10] ERROR com.baidu.disconf.web.innerapi.zookeeper.impl.ZookeeperDriverImpl - Group /disconf/disconf_demo_1_0_0_0_rd does not exist
+
+5406c3d6-ba8e-4b3d-be5d-af0f689a6032 2016-03-30 13:53:16,057 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={hostInfo=})
+bafbfcae-c1cf-46e6-bf46-29fac3b6548c 2016-03-30 13:53:24,692 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/17
+bafbfcae-c1cf-46e6-bf46-29fac3b6548c 2016-03-30 13:53:24,695 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+bafbfcae-c1cf-46e6-bf46-29fac3b6548c 2016-03-30 13:53:24,704 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=17, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=staticItem, value=30, createTime=20140814210709, modifyTime=201408142110]]
+4cb726e0-7b6c-440a-a0bf-ff4ddbcb1cb1 2016-03-30 13:58:06,720 [proScheduler-3] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+444f271a-e028-4de7-b18b-1503a7d54d6d 2016-03-30 14:05:05,438 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+444f271a-e028-4de7-b18b-1503a7d54d6d 2016-03-30 14:05:05,441 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+444f271a-e028-4de7-b18b-1503a7d54d6d 2016-03-30 14:05:05,444 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=444f271a-e028-4de7-b18b-1503a7d54d6d, success=true]
+65fa99b4-08bd-43d5-8810-cb42cb3ed77a 2016-03-30 14:05:05,477 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+65fa99b4-08bd-43d5-8810-cb42cb3ed77a 2016-03-30 14:05:05,479 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+65fa99b4-08bd-43d5-8810-cb42cb3ed77a 2016-03-30 14:05:05,482 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=65fa99b4-08bd-43d5-8810-cb42cb3ed77a, success=true]
+794e1224-73c5-479c-bfbd-08b87808a326 2016-03-30 14:05:05,506 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+794e1224-73c5-479c-bfbd-08b87808a326 2016-03-30 14:05:05,507 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+0a683193-9ab0-4bca-8a87-ad209f7f22f2 2016-03-30 14:05:17,634 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+0a683193-9ab0-4bca-8a87-ad209f7f22f2 2016-03-30 14:05:17,637 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0ab52386-3060-4ae7-b218-3502bbe79121 2016-03-30 14:05:17,637 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+0ab52386-3060-4ae7-b218-3502bbe79121 2016-03-30 14:05:17,639 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0ab52386-3060-4ae7-b218-3502bbe79121 2016-03-30 14:05:17,643 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=0ab52386-3060-4ae7-b218-3502bbe79121, success=true]
+0a683193-9ab0-4bca-8a87-ad209f7f22f2 2016-03-30 14:05:17,643 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=0a683193-9ab0-4bca-8a87-ad209f7f22f2, success=true]
+3816f2bd-d89a-41dc-aff7-d13b6de0aadd 2016-03-30 14:05:17,651 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+3816f2bd-d89a-41dc-aff7-d13b6de0aadd 2016-03-30 14:05:17,653 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+7dc58fc0-1d15-4a90-9078-6970fda453b7 2016-03-30 14:05:26,159 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+7dc58fc0-1d15-4a90-9078-6970fda453b7 2016-03-30 14:05:26,161 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+48c1367f-f903-48c8-a8b1-94b46d335f79 2016-03-30 14:05:37,438 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+48c1367f-f903-48c8-a8b1-94b46d335f79 2016-03-30 14:05:37,440 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+0d8f4071-8293-4658-bf64-16ba304db435 2016-03-30 14:05:37,449 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+a3c79865-50f6-4fbb-9881-67402f217ac4 2016-03-30 14:05:37,449 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+a3c79865-50f6-4fbb-9881-67402f217ac4 2016-03-30 14:05:37,451 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0d8f4071-8293-4658-bf64-16ba304db435 2016-03-30 14:05:37,451 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0d8f4071-8293-4658-bf64-16ba304db435 2016-03-30 14:05:37,457 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=0d8f4071-8293-4658-bf64-16ba304db435, success=true]
+a3c79865-50f6-4fbb-9881-67402f217ac4 2016-03-30 14:05:37,481 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=a3c79865-50f6-4fbb-9881-67402f217ac4, success=true]
+4e0856ff-c92b-4050-a29c-d61f354a6b0b 2016-03-30 14:05:38,654 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+4e0856ff-c92b-4050-a29c-d61f354a6b0b 2016-03-30 14:05:38,657 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+4e0856ff-c92b-4050-a29c-d61f354a6b0b 2016-03-30 14:05:38,657 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=1]
+4e0856ff-c92b-4050-a29c-d61f354a6b0b 2016-03-30 14:05:38,660 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=4e0856ff-c92b-4050-a29c-d61f354a6b0b, success=true]
+eb88497c-5ad8-4a4a-b7ab-418f1bff7aa9 2016-03-30 14:05:40,122 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+eb88497c-5ad8-4a4a-b7ab-418f1bff7aa9 2016-03-30 14:05:40,125 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+eb88497c-5ad8-4a4a-b7ab-418f1bff7aa9 2016-03-30 14:05:40,126 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+eb88497c-5ad8-4a4a-b7ab-418f1bff7aa9 2016-03-30 14:05:40,132 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=eb88497c-5ad8-4a4a-b7ab-418f1bff7aa9, success=true]
+bdcd056b-8f28-4f16-875b-156d5fc58e7d 2016-03-30 14:05:40,172 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+bdcd056b-8f28-4f16-875b-156d5fc58e7d 2016-03-30 14:05:40,177 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+bdcd056b-8f28-4f16-875b-156d5fc58e7d 2016-03-30 14:05:40,177 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+bdcd056b-8f28-4f16-875b-156d5fc58e7d 2016-03-30 14:05:40,199 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=bdcd056b-8f28-4f16-875b-156d5fc58e7d, success=true]
+cb004aac-2f00-481f-94b2-f5a2893f4178 2016-03-30 14:28:16,757 [proScheduler-2] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+b7ca64de-a377-4734-82bf-329c8d93428d 2016-03-30 14:40:39,281 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/17
+b7ca64de-a377-4734-82bf-329c8d93428d 2016-03-30 14:40:39,283 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=b7ca64de-a377-4734-82bf-329c8d93428d, success=false]
+7c8cb97b-8c5d-4751-83e9-77184abc272d 2016-03-30 14:41:06,035 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/12
+7c8cb97b-8c5d-4751-83e9-77184abc272d 2016-03-30 14:41:06,037 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=7c8cb97b-8c5d-4751-83e9-77184abc272d, success=false]
+a019fffb-2512-484c-b606-58ec146eb859 2016-03-30 14:41:09,519 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+a019fffb-2512-484c-b606-58ec146eb859 2016-03-30 14:41:09,520 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=a019fffb-2512-484c-b606-58ec146eb859, success=false]
+5d699b9c-d0a4-4689-b5ab-a9584689f559 2016-03-30 14:41:09,531 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+7a0bd103-98f7-4506-ac9a-17357295ea9c 2016-03-30 14:41:09,532 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+5d699b9c-d0a4-4689-b5ab-a9584689f559 2016-03-30 14:41:09,533 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=5d699b9c-d0a4-4689-b5ab-a9584689f559, success=false]
+7a0bd103-98f7-4506-ac9a-17357295ea9c 2016-03-30 14:41:09,533 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=7a0bd103-98f7-4506-ac9a-17357295ea9c, success=false]
+af0f6424-d8d7-48d2-9147-c3732e98cc32 2016-03-30 14:41:09,775 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+af0f6424-d8d7-48d2-9147-c3732e98cc32 2016-03-30 14:41:09,775 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=af0f6424-d8d7-48d2-9147-c3732e98cc32, success=false]
+a79882ec-de19-4997-9a97-4eaf7720d3e8 2016-03-30 14:41:17,046 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/signin
+a79882ec-de19-4997-9a97-4eaf7720d3e8 2016-03-30 14:41:17,052 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.auth.UserController - com.baidu.disconf.web.service.sign.form.SigninForm@4188bfe5
+a79882ec-de19-4997-9a97-4eaf7720d3e8 2016-03-30 14:41:17,059 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+1052bab5-73cf-48d9-87a5-a2b921d75649 2016-03-30 14:41:17,210 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+a559ed7c-0c30-4f9c-8dd1-2de78c0f963a 2016-03-30 14:41:17,210 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+138b4ea4-4953-44da-88e6-d267ee25adf4 2016-03-30 14:41:17,210 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+1052bab5-73cf-48d9-87a5-a2b921d75649 2016-03-30 14:41:17,213 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+138b4ea4-4953-44da-88e6-d267ee25adf4 2016-03-30 14:41:17,213 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+a559ed7c-0c30-4f9c-8dd1-2de78c0f963a 2016-03-30 14:41:17,214 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+1052bab5-73cf-48d9-87a5-a2b921d75649 2016-03-30 14:41:17,216 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=1052bab5-73cf-48d9-87a5-a2b921d75649, success=true]
+138b4ea4-4953-44da-88e6-d267ee25adf4 2016-03-30 14:41:17,216 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=138b4ea4-4953-44da-88e6-d267ee25adf4, success=true]
+be9e11c4-e5a8-4e74-a510-863849f4be85 2016-03-30 14:41:18,754 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+be9e11c4-e5a8-4e74-a510-863849f4be85 2016-03-30 14:41:18,760 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+be9e11c4-e5a8-4e74-a510-863849f4be85 2016-03-30 14:41:18,760 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=null]
+be9e11c4-e5a8-4e74-a510-863849f4be85 2016-03-30 14:41:18,769 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=be9e11c4-e5a8-4e74-a510-863849f4be85, success=true]
+b054b2d8-9184-4d14-9f66-8a17d45b4f5f 2016-03-30 14:41:19,748 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+b054b2d8-9184-4d14-9f66-8a17d45b4f5f 2016-03-30 14:41:19,751 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+b054b2d8-9184-4d14-9f66-8a17d45b4f5f 2016-03-30 14:41:19,752 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+b054b2d8-9184-4d14-9f66-8a17d45b4f5f 2016-03-30 14:41:19,759 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=b054b2d8-9184-4d14-9f66-8a17d45b4f5f, success=true]
+604ce469-1ab5-440f-b4cc-2b62896d1e7c 2016-03-30 14:41:19,785 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+604ce469-1ab5-440f-b4cc-2b62896d1e7c 2016-03-30 14:41:19,790 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+604ce469-1ab5-440f-b4cc-2b62896d1e7c 2016-03-30 14:41:19,791 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+604ce469-1ab5-440f-b4cc-2b62896d1e7c 2016-03-30 14:41:19,822 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=604ce469-1ab5-440f-b4cc-2b62896d1e7c, success=true]
+99960d46-8626-4f35-9cd9-ee7087bcfc74 2016-03-30 14:41:22,248 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/17
+99960d46-8626-4f35-9cd9-ee7087bcfc74 2016-03-30 14:41:22,250 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+99960d46-8626-4f35-9cd9-ee7087bcfc74 2016-03-30 14:41:22,260 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=17, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=staticItem, value=30, createTime=20140814210709, modifyTime=201408142110]]
+fba6b7e6-7e6c-4c8b-ac83-58a910ee2df1 2016-03-30 14:41:27,296 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/4
+fba6b7e6-7e6c-4c8b-ac83-58a910ee2df1 2016-03-30 14:41:27,298 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+fba6b7e6-7e6c-4c8b-ac83-58a910ee2df1 2016-03-30 14:41:27,305 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=4, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=coefficients.properties, value=coe.baiFaCoe=1.3
+coe.yuErBaoCoe=1.3
+, createTime=99991231235959, modifyTime=201412051541]]
+9b6b4f36-0f18-414a-a0c4-34e0bc78d623 2016-03-30 14:41:33,479 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/146
+9b6b4f36-0f18-414a-a0c4-34e0bc78d623 2016-03-30 14:41:33,481 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+9b6b4f36-0f18-414a-a0c4-34e0bc78d623 2016-03-30 14:41:33,493 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=146, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=code.properties, value=syserror.paramtype=请求参数解析错" + "误, createTime=20150107115835, modifyTime=201501071158]]
+5e98f3a6-6bed-4363-9b51-ed5925cef645 2016-03-30 14:41:44,048 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/48
+5e98f3a6-6bed-4363-9b51-ed5925cef645 2016-03-30 14:41:44,052 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+5e98f3a6-6bed-4363-9b51-ed5925cef645 2016-03-30 14:41:44,062 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=48, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=myserver.properties, value=server=127.0.0.1:16600,127.0.0.1:16602,127.0.0.1:16603
+retry=5
+, createTime=20140911223117, modifyTime=201411171531]]
+b23ed548-68ac-4533-b2b1-1eb86524bb86 2016-03-30 14:42:10,486 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/7
+b23ed548-68ac-4533-b2b1-1eb86524bb86 2016-03-30 14:42:10,490 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+b23ed548-68ac-4533-b2b1-1eb86524bb86 2016-03-30 14:42:10,516 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=7, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=discountRate, value=0.5, createTime=20140801142833, modifyTime=201409051301]]
+7fb5c31c-7bff-46a1-a0ed-a7d5e4020d94 2016-03-30 14:42:21,453 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/5
+7fb5c31c-7bff-46a1-a0ed-a7d5e4020d94 2016-03-30 14:42:21,457 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+7fb5c31c-7bff-46a1-a0ed-a7d5e4020d94 2016-03-30 14:42:21,469 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=5, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=moneyInvest, value=10000, createTime=99991231235959, modifyTime=201409021835]]
+adfb0fb2-aa14-42dc-ae80-08ce6c47dd55 2016-03-30 14:58:26,791 [proScheduler-4] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+8a0beb2d-d738-42a4-90ea-003fca9fd590 2016-03-30 15:28:36,826 [proScheduler-1] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+9d159368-08c0-421d-94f7-b840ec23b8a9 2016-03-30 15:49:17,881 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+21e35e1e-051d-4eef-9797-60d6957a0410 2016-03-30 15:49:17,881 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+5707200d-3a4c-4fb5-b8bd-97aa97d38dd5 2016-03-30 15:49:17,881 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+9d159368-08c0-421d-94f7-b840ec23b8a9 2016-03-30 15:49:17,882 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=9d159368-08c0-421d-94f7-b840ec23b8a9, success=false]
+5707200d-3a4c-4fb5-b8bd-97aa97d38dd5 2016-03-30 15:49:17,882 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=5707200d-3a4c-4fb5-b8bd-97aa97d38dd5, success=false]
+21e35e1e-051d-4eef-9797-60d6957a0410 2016-03-30 15:49:17,882 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=21e35e1e-051d-4eef-9797-60d6957a0410, success=false]
+45cfd48e-c41e-4843-8228-cc829da0bc9f 2016-03-30 15:49:18,189 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+45cfd48e-c41e-4843-8228-cc829da0bc9f 2016-03-30 15:49:18,190 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=45cfd48e-c41e-4843-8228-cc829da0bc9f, success=false]
+aa9dddef-477d-4baa-9934-4517eaf099b5 2016-03-30 15:58:46,858 [proScheduler-5] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+c98053f5-ff9b-4f58-be37-03d392d0d9e2 2016-03-30 16:09:18,560 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/hosts
+e048f992-41dd-4447-bb2f-fc8f58ad0cca 2016-03-30 16:09:18,639 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/prefix
+2ca5eeea-8e00-448b-9922-60922c09e3c2 2016-03-30 16:09:23,670 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+0b4d05d1-ee2e-49dd-8456-493b76b8b2b3 2016-03-30 16:09:23,825 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+7e373069-33e7-4148-9461-1c308b706efa 2016-03-30 16:09:23,887 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+d98fe740-bb7c-47aa-8459-373a0b887ac1 2016-03-30 16:09:23,971 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+458c9c47-8fb9-43fd-9500-c2e30d329df0 2016-03-30 16:09:24,017 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+ba00e2a2-bcfd-42fc-a202-bf89a4ae8cba 2016-03-30 16:09:24,066 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+73c93fd7-1c06-4184-a65b-21d697653641 2016-03-30 16:09:24,110 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+be967c20-1fca-4019-b4c3-3ad752d6ddb7 2016-03-30 16:09:24,157 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+be967c20-1fca-4019-b4c3-3ad752d6ddb7 2016-03-30 16:09:24,160 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=staticItem]
+5d7b5015-c042-45b9-bebf-9eee7a419167 2016-03-30 16:09:24,203 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+5d7b5015-c042-45b9-bebf-9eee7a419167 2016-03-30 16:09:24,209 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=moneyInvest]
+6365bd83-f818-4b9a-94e1-29091052f599 2016-03-30 16:09:24,285 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+6365bd83-f818-4b9a-94e1-29091052f599 2016-03-30 16:09:24,287 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=discountRate]
+d04b3d14-3e89-401c-bb93-2849cbbf65eb 2016-03-30 16:09:24,415 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+9461df21-75e9-4988-86b1-6707d437246e 2016-03-30 16:09:24,462 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+bf9f23cd-0884-4bd2-b026-5d8d8c9d3d7b 2016-03-30 16:09:24,510 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+c1d89522-0700-48d5-a0fe-3c10ee077cbf 2016-03-30 16:09:24,569 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+4bce6369-08db-42c6-9711-73f78fbe7cb7 2016-03-30 16:09:24,642 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+d011ce07-9c60-4463-9acd-37e9b7cd6df0 2016-03-30 16:09:24,701 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+3c5ec8dc-3811-4f80-84f0-898b88994c06 2016-03-30 16:09:52,451 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/signin
+3c5ec8dc-3811-4f80-84f0-898b88994c06 2016-03-30 16:09:52,455 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.web.auth.UserController - com.baidu.disconf.web.service.sign.form.SigninForm@4048868b
+3c5ec8dc-3811-4f80-84f0-898b88994c06 2016-03-30 16:09:52,464 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+f0ec3d05-18fb-4aa2-ab23-933f3dfaba25 2016-03-30 16:09:52,806 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+e7fa555c-580b-4c77-a6cc-ceab83490346 2016-03-30 16:09:52,810 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+d3036b8b-1668-4414-9147-7836a6fc797c 2016-03-30 16:09:52,811 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+f0ec3d05-18fb-4aa2-ab23-933f3dfaba25 2016-03-30 16:09:52,808 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+d3036b8b-1668-4414-9147-7836a6fc797c 2016-03-30 16:09:52,813 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e7fa555c-580b-4c77-a6cc-ceab83490346 2016-03-30 16:09:52,813 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e7fa555c-580b-4c77-a6cc-ceab83490346 2016-03-30 16:09:52,816 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=e7fa555c-580b-4c77-a6cc-ceab83490346, success=true]
+d3036b8b-1668-4414-9147-7836a6fc797c 2016-03-30 16:09:52,816 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=d3036b8b-1668-4414-9147-7836a6fc797c, success=true]
+729c123e-059d-4286-a3d6-7e00b3ba68d7 2016-03-30 16:09:54,012 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+729c123e-059d-4286-a3d6-7e00b3ba68d7 2016-03-30 16:09:54,018 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+729c123e-059d-4286-a3d6-7e00b3ba68d7 2016-03-30 16:09:54,018 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=-1, envId=1]
+729c123e-059d-4286-a3d6-7e00b3ba68d7 2016-03-30 16:09:54,022 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=729c123e-059d-4286-a3d6-7e00b3ba68d7, success=true]
+1d979745-8805-401f-b5a7-87cb92fd426e 2016-03-30 16:09:55,102 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+1d979745-8805-401f-b5a7-87cb92fd426e 2016-03-30 16:09:55,107 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+1d979745-8805-401f-b5a7-87cb92fd426e 2016-03-30 16:09:55,108 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+1d979745-8805-401f-b5a7-87cb92fd426e 2016-03-30 16:09:55,119 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=1d979745-8805-401f-b5a7-87cb92fd426e, success=true]
+4a48a8d0-9206-40dd-8ec1-07e56aa7fa2f 2016-03-30 16:09:55,184 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+4a48a8d0-9206-40dd-8ec1-07e56aa7fa2f 2016-03-30 16:09:55,191 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+4a48a8d0-9206-40dd-8ec1-07e56aa7fa2f 2016-03-30 16:09:55,192 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+4a48a8d0-9206-40dd-8ec1-07e56aa7fa2f 2016-03-30 16:09:55,340 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=4a48a8d0-9206-40dd-8ec1-07e56aa7fa2f, success=true]
+3ff2bdc0-3582-41df-9cd0-007fa2ea9eba 2016-03-30 16:10:07,496 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/12
+3ff2bdc0-3582-41df-9cd0-007fa2ea9eba 2016-03-30 16:10:07,500 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+3ff2bdc0-3582-41df-9cd0-007fa2ea9eba 2016-03-30 16:10:07,512 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=12, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=redis.properties, value=redis.host=127.0.0.1
+redis.port=6380, createTime=20140811172327, modifyTime=201603301345]]
+021e6d23-0c55-4354-84ef-85a74708da9d 2016-03-30 16:10:10,286 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/zk/12
+021e6d23-0c55-4354-84ef-85a74708da9d 2016-03-30 16:10:10,291 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/zk/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+021e6d23-0c55-4354-84ef-85a74708da9d 2016-03-30 16:10:10,310 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=MachineListVo [datalist=[ZkDisconfDataItem [machine=hanchenglin-PC_0_decb57c1-bb96-42dd-9159-4b55f2c8cb38, value={"redis.host":"127.0.0.1","redis.port":6380}, errorList=[]]], errorNum=0, machineSize=1]]
+dac6fc11-3d07-4a1b-b44d-2c69330d13d4 2016-03-30 16:10:21,672 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+dac6fc11-3d07-4a1b-b44d-2c69330d13d4 2016-03-30 16:10:21,674 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+9d51bc6c-8bb2-4d2d-9658-39f209124f10 2016-03-30 16:10:21,678 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/12
+9d51bc6c-8bb2-4d2d-9658-39f209124f10 2016-03-30 16:10:21,682 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+9d51bc6c-8bb2-4d2d-9658-39f209124f10 2016-03-30 16:10:21,695 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=12, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=redis.properties, value=redis.host=127.0.0.1
+redis.port=6380, createTime=20140811172327, modifyTime=201603301345]]
+e3c1f128-30f0-471b-9aff-5d23bbc83ed9 2016-03-30 16:10:21,808 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+e3c1f128-30f0-471b-9aff-5d23bbc83ed9 2016-03-30 16:10:21,811 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e3c1f128-30f0-471b-9aff-5d23bbc83ed9 2016-03-30 16:10:21,812 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+e3c1f128-30f0-471b-9aff-5d23bbc83ed9 2016-03-30 16:10:21,822 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=e3c1f128-30f0-471b-9aff-5d23bbc83ed9, success=true]
+89f44a91-9b70-4555-80e1-409ed0f3d8bd 2016-03-30 16:10:57,000 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+89f44a91-9b70-4555-80e1-409ed0f3d8bd 2016-03-30 16:10:57,001 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+585abf0c-bbf5-430f-ad61-7f066cde4d4d 2016-03-30 16:10:57,012 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/7
+585abf0c-bbf5-430f-ad61-7f066cde4d4d 2016-03-30 16:10:57,015 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+585abf0c-bbf5-430f-ad61-7f066cde4d4d 2016-03-30 16:10:57,023 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=7, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=discountRate, value=0.5, createTime=20140801142833, modifyTime=201409051301]]
+a783fc6c-0e7d-4e5f-9930-abb2a005abfb 2016-03-30 16:10:57,056 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+a783fc6c-0e7d-4e5f-9930-abb2a005abfb 2016-03-30 16:10:57,060 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+a783fc6c-0e7d-4e5f-9930-abb2a005abfb 2016-03-30 16:10:57,061 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+a783fc6c-0e7d-4e5f-9930-abb2a005abfb 2016-03-30 16:10:57,074 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=a783fc6c-0e7d-4e5f-9930-abb2a005abfb, success=true]
+82327248-9a76-4dd2-8b0d-554f892adc41 2016-03-30 16:12:00,300 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/item/7
+82327248-9a76-4dd2-8b0d-554f892adc41 2016-03-30 16:12:00,306 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/item/{configId}/, method:PUT, UserId:6, RoleId:2, Is priviledged:true
+82327248-9a76-4dd2-8b0d-554f892adc41 2016-03-30 16:12:00,338 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigUpdateController - start to update config: 7
+82327248-9a76-4dd2-8b0d-554f892adc41 2016-03-30 16:12:00,384 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.utils.email.LogMailBean - send to 
+82327248-9a76-4dd2-8b0d-554f892adc41 2016-03-30 16:12:00,385 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.utils.email.LogMailBean - title:  config update
+82327248-9a76-4dd2-8b0d-554f892adc41 2016-03-30 16:12:00,385 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.utils.email.LogMailBean - contentConfig(type=1, status=1, name=discountRate, value=0.5, appId=2, version=1_0_0_0, envId=1, createTime=20140801142833, updateTime=20140905130141)<br/><br/><br/>点击<a href='http://disconf.com/modifyFile.html?configId=7'> 这里 </a> 进入查看<br/><br/> <span style='color:#FF0000'>Change info: </span><br/>[position: 0, size: 1, lines: [1]]<br/><br/><br/><br/><span style='color:#FF0000'>Old value:</span><br/>0.5<br/><br/><br/><span style='color:#FF0000'>New value:</span><br/>1
+82327248-9a76-4dd2-8b0d-554f892adc41 2016-03-30 16:12:00,493 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=修改成功，邮件发送失败，请检查邮箱配置]
+97c62e2d-2231-4d73-953f-17ab2ffb2c10 2016-03-30 16:12:00,533 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+97c62e2d-2231-4d73-953f-17ab2ffb2c10 2016-03-30 16:12:00,537 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=discountRate]
+64d2d363-ca86-4c3b-b077-ed9f5fa094ec 2016-03-30 16:12:14,522 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+64d2d363-ca86-4c3b-b077-ed9f5fa094ec 2016-03-30 16:12:14,525 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+adb97479-67af-454a-bee5-9d63f0f775c3 2016-03-30 16:12:14,525 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/4
+adb97479-67af-454a-bee5-9d63f0f775c3 2016-03-30 16:12:14,527 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+adb97479-67af-454a-bee5-9d63f0f775c3 2016-03-30 16:12:14,539 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=4, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=coefficients.properties, value=coe.baiFaCoe=1.3
+coe.yuErBaoCoe=1.3
+, createTime=99991231235959, modifyTime=201412051541]]
+6a2d3d10-479e-4c52-b452-26ed3429202e 2016-03-30 16:12:14,578 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+6a2d3d10-479e-4c52-b452-26ed3429202e 2016-03-30 16:12:14,583 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+6a2d3d10-479e-4c52-b452-26ed3429202e 2016-03-30 16:12:14,584 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+6a2d3d10-479e-4c52-b452-26ed3429202e 2016-03-30 16:12:14,601 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=6a2d3d10-479e-4c52-b452-26ed3429202e, success=true]
+fcb093f5-5fc0-4f9b-b94b-d5495e3d934c 2016-03-30 16:12:22,024 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+fcb093f5-5fc0-4f9b-b94b-d5495e3d934c 2016-03-30 16:12:22,026 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+1339a26a-895e-4b38-a9c9-0ee4d4f0d2c4 2016-03-30 16:12:22,026 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/5
+1339a26a-895e-4b38-a9c9-0ee4d4f0d2c4 2016-03-30 16:12:22,028 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+1339a26a-895e-4b38-a9c9-0ee4d4f0d2c4 2016-03-30 16:12:22,035 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=5, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=moneyInvest, value=10000, createTime=99991231235959, modifyTime=201409021835]]
+0e124821-ab82-4332-a316-32e11dd6ef00 2016-03-30 16:12:22,083 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+0e124821-ab82-4332-a316-32e11dd6ef00 2016-03-30 16:12:22,088 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0e124821-ab82-4332-a316-32e11dd6ef00 2016-03-30 16:12:22,089 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+0e124821-ab82-4332-a316-32e11dd6ef00 2016-03-30 16:12:22,101 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=0e124821-ab82-4332-a316-32e11dd6ef00, success=true]
+52907f23-0f06-460e-9297-7e42ce99edc7 2016-03-30 16:12:24,313 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+52907f23-0f06-460e-9297-7e42ce99edc7 2016-03-30 16:12:24,315 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+0ad9c4f8-a5fd-4ac8-8a3a-8da076b32344 2016-03-30 16:12:24,315 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/7
+0ad9c4f8-a5fd-4ac8-8a3a-8da076b32344 2016-03-30 16:12:24,318 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0ad9c4f8-a5fd-4ac8-8a3a-8da076b32344 2016-03-30 16:12:24,328 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=7, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=discountRate, value=1, createTime=20140801142833, modifyTime=201603301612]]
+5703f54c-4dfd-4fe9-985b-deb5239c37d7 2016-03-30 16:12:24,394 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+5703f54c-4dfd-4fe9-985b-deb5239c37d7 2016-03-30 16:12:24,399 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+5703f54c-4dfd-4fe9-985b-deb5239c37d7 2016-03-30 16:12:24,399 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+5703f54c-4dfd-4fe9-985b-deb5239c37d7 2016-03-30 16:12:24,425 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=5703f54c-4dfd-4fe9-985b-deb5239c37d7, success=true]
+487f62a8-d4ca-4bbb-812f-6c760a6c3e4c 2016-03-30 16:12:27,809 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+487f62a8-d4ca-4bbb-812f-6c760a6c3e4c 2016-03-30 16:12:27,811 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+afdf2bd3-643e-479c-928f-2cd454c3595d 2016-03-30 16:12:27,826 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/5
+afdf2bd3-643e-479c-928f-2cd454c3595d 2016-03-30 16:12:27,828 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+afdf2bd3-643e-479c-928f-2cd454c3595d 2016-03-30 16:12:27,835 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=5, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=moneyInvest, value=10000, createTime=99991231235959, modifyTime=201409021835]]
+cf006c4c-0e86-48ba-b124-9270e3f21448 2016-03-30 16:12:27,923 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+cf006c4c-0e86-48ba-b124-9270e3f21448 2016-03-30 16:12:27,928 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+cf006c4c-0e86-48ba-b124-9270e3f21448 2016-03-30 16:12:27,928 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+cf006c4c-0e86-48ba-b124-9270e3f21448 2016-03-30 16:12:27,939 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=cf006c4c-0e86-48ba-b124-9270e3f21448, success=true]
+e3782717-41d2-4d87-b812-cd762c3bb26c 2016-03-30 16:12:31,402 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/item/5
+e3782717-41d2-4d87-b812-cd762c3bb26c 2016-03-30 16:12:31,405 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/item/{configId}/, method:PUT, UserId:6, RoleId:2, Is priviledged:true
+e3782717-41d2-4d87-b812-cd762c3bb26c 2016-03-30 16:12:31,409 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigUpdateController - start to update config: 5
+e3782717-41d2-4d87-b812-cd762c3bb26c 2016-03-30 16:12:31,415 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.utils.email.LogMailBean - send to 
+e3782717-41d2-4d87-b812-cd762c3bb26c 2016-03-30 16:12:31,415 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.utils.email.LogMailBean - title:  config update
+e3782717-41d2-4d87-b812-cd762c3bb26c 2016-03-30 16:12:31,416 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.utils.email.LogMailBean - contentConfig(type=1, status=1, name=moneyInvest, value=10000, appId=2, version=1_0_0_0, envId=1, createTime=99991231235959, updateTime=20140902183514)<br/><br/><br/>点击<a href='http://disconf.com/modifyFile.html?configId=5'> 这里 </a> 进入查看<br/><br/> <span style='color:#FF0000'>Change info: </span><br/>[position: 0, size: 1, lines: [20000]]<br/><br/><br/><br/><span style='color:#FF0000'>Old value:</span><br/>10000<br/><br/><br/><span style='color:#FF0000'>New value:</span><br/>20000
+e3782717-41d2-4d87-b812-cd762c3bb26c 2016-03-30 16:12:31,431 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=修改成功，邮件发送失败，请检查邮箱配置]
+b5e34ffa-cdfb-4c12-bd3c-871e89885d30 2016-03-30 16:12:31,438 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+b5e34ffa-cdfb-4c12-bd3c-871e89885d30 2016-03-30 16:12:31,440 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=moneyInvest]
+06b40032-e94d-4a6b-95f1-2bc548a18123 2016-03-30 16:12:33,274 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+06b40032-e94d-4a6b-95f1-2bc548a18123 2016-03-30 16:12:33,277 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+607446f0-9fe4-432c-89fc-2f65e54db4d6 2016-03-30 16:12:33,278 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/7
+607446f0-9fe4-432c-89fc-2f65e54db4d6 2016-03-30 16:12:33,280 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+607446f0-9fe4-432c-89fc-2f65e54db4d6 2016-03-30 16:12:33,293 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=7, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=discountRate, value=1, createTime=20140801142833, modifyTime=201603301612]]
+d1b1f86c-a6bc-4612-b4c7-3413444b68e6 2016-03-30 16:12:33,332 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+d1b1f86c-a6bc-4612-b4c7-3413444b68e6 2016-03-30 16:12:33,337 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+d1b1f86c-a6bc-4612-b4c7-3413444b68e6 2016-03-30 16:12:33,337 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+d1b1f86c-a6bc-4612-b4c7-3413444b68e6 2016-03-30 16:12:33,346 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=d1b1f86c-a6bc-4612-b4c7-3413444b68e6, success=true]
+62057b45-2296-4c4f-b945-3357f53b081c 2016-03-30 16:12:51,050 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+62057b45-2296-4c4f-b945-3357f53b081c 2016-03-30 16:12:51,052 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+f2f0e53b-cf62-47ab-9990-2b67145bb624 2016-03-30 16:12:51,053 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/4
+f2f0e53b-cf62-47ab-9990-2b67145bb624 2016-03-30 16:12:51,055 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+f2f0e53b-cf62-47ab-9990-2b67145bb624 2016-03-30 16:12:51,069 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=4, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=coefficients.properties, value=coe.baiFaCoe=1.3
+coe.yuErBaoCoe=1.3
+, createTime=99991231235959, modifyTime=201412051541]]
+db18cbe1-d1cc-4434-9f6d-1f5c0a30ff3c 2016-03-30 16:12:51,098 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+db18cbe1-d1cc-4434-9f6d-1f5c0a30ff3c 2016-03-30 16:12:51,104 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+db18cbe1-d1cc-4434-9f6d-1f5c0a30ff3c 2016-03-30 16:12:51,105 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+db18cbe1-d1cc-4434-9f6d-1f5c0a30ff3c 2016-03-30 16:12:51,125 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=db18cbe1-d1cc-4434-9f6d-1f5c0a30ff3c, success=true]
+2dfb0725-cff9-493e-856e-7f5c8bfb7d3c 2016-03-30 16:12:52,339 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+2dfb0725-cff9-493e-856e-7f5c8bfb7d3c 2016-03-30 16:12:52,341 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+ad109804-763c-4f56-8f47-bdb8c0297755 2016-03-30 16:12:52,343 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/7
+ad109804-763c-4f56-8f47-bdb8c0297755 2016-03-30 16:12:52,346 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+ad109804-763c-4f56-8f47-bdb8c0297755 2016-03-30 16:12:52,379 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=7, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=discountRate, value=1, createTime=20140801142833, modifyTime=201603301612]]
+4f788577-86f4-46c9-857c-b41a8ae34e36 2016-03-30 16:12:52,402 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+4f788577-86f4-46c9-857c-b41a8ae34e36 2016-03-30 16:12:52,411 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+4f788577-86f4-46c9-857c-b41a8ae34e36 2016-03-30 16:12:52,411 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+4f788577-86f4-46c9-857c-b41a8ae34e36 2016-03-30 16:12:52,426 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=4f788577-86f4-46c9-857c-b41a8ae34e36, success=true]
+354413d1-eaf6-4fc3-8ae1-54eb745846cc 2016-03-30 16:12:53,046 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+354413d1-eaf6-4fc3-8ae1-54eb745846cc 2016-03-30 16:12:53,048 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+547c7393-9f21-40d3-93ac-8ae648a8edee 2016-03-30 16:12:53,050 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/5
+547c7393-9f21-40d3-93ac-8ae648a8edee 2016-03-30 16:12:53,052 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+547c7393-9f21-40d3-93ac-8ae648a8edee 2016-03-30 16:12:53,061 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=5, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=moneyInvest, value=20000, createTime=99991231235959, modifyTime=201603301612]]
+218fb49a-75da-4591-b1f0-c278a36da8ec 2016-03-30 16:12:53,109 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+218fb49a-75da-4591-b1f0-c278a36da8ec 2016-03-30 16:12:53,114 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+218fb49a-75da-4591-b1f0-c278a36da8ec 2016-03-30 16:12:53,114 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+218fb49a-75da-4591-b1f0-c278a36da8ec 2016-03-30 16:12:53,126 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=218fb49a-75da-4591-b1f0-c278a36da8ec, success=true]
+1a0747bf-68f8-4f34-9448-f8b7eec82a3a 2016-03-30 16:14:43,168 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+1a0747bf-68f8-4f34-9448-f8b7eec82a3a 2016-03-30 16:14:43,169 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+0a50300e-b6eb-4665-bc49-f359f2bb3cad 2016-03-30 16:14:43,177 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/4
+0a50300e-b6eb-4665-bc49-f359f2bb3cad 2016-03-30 16:14:43,180 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0a50300e-b6eb-4665-bc49-f359f2bb3cad 2016-03-30 16:14:43,202 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=4, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=coefficients.properties, value=coe.baiFaCoe=1.3
+coe.yuErBaoCoe=1.3
+, createTime=99991231235959, modifyTime=201412051541]]
+65fafb96-d430-4d73-8241-8eabc5f34c33 2016-03-30 16:14:43,303 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+65fafb96-d430-4d73-8241-8eabc5f34c33 2016-03-30 16:14:43,309 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+65fafb96-d430-4d73-8241-8eabc5f34c33 2016-03-30 16:14:43,310 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+65fafb96-d430-4d73-8241-8eabc5f34c33 2016-03-30 16:14:43,320 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=65fafb96-d430-4d73-8241-8eabc5f34c33, success=true]
+8b2457fc-29fb-458b-9739-66500bf60987 2016-03-30 16:14:51,491 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/filetext/4
+8b2457fc-29fb-458b-9739-66500bf60987 2016-03-30 16:14:51,495 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/filetext/{configId}/, method:PUT, UserId:6, RoleId:2, Is priviledged:true
+8b2457fc-29fb-458b-9739-66500bf60987 2016-03-30 16:14:51,496 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigUpdateController - receive file: coe.baiFaCoe=2
+coe.yuErBaoCoe=1.3
+
+8b2457fc-29fb-458b-9739-66500bf60987 2016-03-30 16:14:51,509 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.utils.email.LogMailBean - send to 
+8b2457fc-29fb-458b-9739-66500bf60987 2016-03-30 16:14:51,510 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.utils.email.LogMailBean - title:  config update
+8b2457fc-29fb-458b-9739-66500bf60987 2016-03-30 16:14:51,510 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.utils.email.LogMailBean - contentConfig(type=0, status=1, name=coefficients.properties, value=coe.baiFaCoe=1.3
+coe.yuErBaoCoe=1.3
+, appId=2, version=1_0_0_0, envId=1, createTime=99991231235959, updateTime=20141205154137)<br/><br/><br/>点击<a href='http://disconf.com/modifyFile.html?configId=4'> 这里 </a> 进入查看<br/><br/> <span style='color:#FF0000'>Change info: </span><br/>[position: 0, size: 1, lines: [coe.baiFaCoe=2]]<br/><br/><br/><br/><span style='color:#FF0000'>Old value:</span><br/>coe.baiFaCoe=1.3<br/>coe.yuErBaoCoe=1.3<br/><br/><br/><br/><span style='color:#FF0000'>New value:</span><br/>coe.baiFaCoe=2<br/>coe.yuErBaoCoe=1.3<br/>
+8b2457fc-29fb-458b-9739-66500bf60987 2016-03-30 16:14:51,512 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigUpdateController - update 4 ok
+8b2457fc-29fb-458b-9739-66500bf60987 2016-03-30 16:14:51,539 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=修改成功，邮件发送失败，请检查邮箱配置]
+831076cf-66d9-464f-9d08-48f77dae767c 2016-03-30 16:14:51,550 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+4ac29513-d939-4d26-a1fa-0e279a7b85ed 2016-03-30 16:14:51,574 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/4
+4ac29513-d939-4d26-a1fa-0e279a7b85ed 2016-03-30 16:14:51,578 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+4ac29513-d939-4d26-a1fa-0e279a7b85ed 2016-03-30 16:14:51,588 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=4, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=coefficients.properties, value=coe.baiFaCoe=2
+coe.yuErBaoCoe=1.3
+, createTime=99991231235959, modifyTime=201603301614]]
+1eba2787-dd69-46da-8e69-f50c34eda0e2 2016-03-30 16:14:51,625 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+1eba2787-dd69-46da-8e69-f50c34eda0e2 2016-03-30 16:14:51,632 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+1eba2787-dd69-46da-8e69-f50c34eda0e2 2016-03-30 16:14:51,633 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+1eba2787-dd69-46da-8e69-f50c34eda0e2 2016-03-30 16:14:51,644 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=1eba2787-dd69-46da-8e69-f50c34eda0e2, success=true]
+f2780ce8-0553-4204-8a74-e2d2b5f975f6 2016-03-30 16:15:06,438 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+f2780ce8-0553-4204-8a74-e2d2b5f975f6 2016-03-30 16:15:06,439 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+7c67866e-a49a-4659-8d85-f2d18dfe6f5b 2016-03-30 16:15:06,441 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/7
+7c67866e-a49a-4659-8d85-f2d18dfe6f5b 2016-03-30 16:15:06,443 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+7c67866e-a49a-4659-8d85-f2d18dfe6f5b 2016-03-30 16:15:06,457 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=7, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=discountRate, value=1, createTime=20140801142833, modifyTime=201603301612]]
+ae6def96-e510-4013-9497-2b972835ad0a 2016-03-30 16:15:06,717 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+ae6def96-e510-4013-9497-2b972835ad0a 2016-03-30 16:15:06,722 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+ae6def96-e510-4013-9497-2b972835ad0a 2016-03-30 16:15:06,723 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+ae6def96-e510-4013-9497-2b972835ad0a 2016-03-30 16:15:06,736 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=ae6def96-e510-4013-9497-2b972835ad0a, success=true]
+26cd8135-967c-4407-8b9c-90b448358671 2016-03-30 16:15:08,341 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+26cd8135-967c-4407-8b9c-90b448358671 2016-03-30 16:15:08,343 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+07c014c9-a171-4c5c-abd1-fe2c859bcb18 2016-03-30 16:15:08,344 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/5
+07c014c9-a171-4c5c-abd1-fe2c859bcb18 2016-03-30 16:15:08,347 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+07c014c9-a171-4c5c-abd1-fe2c859bcb18 2016-03-30 16:15:08,357 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=5, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=moneyInvest, value=20000, createTime=99991231235959, modifyTime=201603301612]]
+1d82c0b3-7fa0-4165-951b-2579950be860 2016-03-30 16:15:08,504 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+1d82c0b3-7fa0-4165-951b-2579950be860 2016-03-30 16:15:08,514 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+1d82c0b3-7fa0-4165-951b-2579950be860 2016-03-30 16:15:08,515 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+1d82c0b3-7fa0-4165-951b-2579950be860 2016-03-30 16:15:08,529 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=1d82c0b3-7fa0-4165-951b-2579950be860, success=true]
+0249d97d-3719-49c4-9a1e-fde50c02fe8f 2016-03-30 16:15:35,332 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+0249d97d-3719-49c4-9a1e-fde50c02fe8f 2016-03-30 16:15:35,334 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+155d6de9-d0b7-4edd-91ee-e4c6d9046819 2016-03-30 16:15:35,335 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/4
+155d6de9-d0b7-4edd-91ee-e4c6d9046819 2016-03-30 16:15:35,338 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+155d6de9-d0b7-4edd-91ee-e4c6d9046819 2016-03-30 16:15:35,350 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=4, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=coefficients.properties, value=coe.baiFaCoe=2
+coe.yuErBaoCoe=1.3
+, createTime=99991231235959, modifyTime=201603301614]]
+2f05c80f-d292-4c81-98d1-46f3c1fd545c 2016-03-30 16:15:35,384 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/simple/list
+2f05c80f-d292-4c81-98d1-46f3c1fd545c 2016-03-30 16:15:35,390 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/simple/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+2f05c80f-d292-4c81-98d1-46f3c1fd545c 2016-03-30 16:15:35,390 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+2f05c80f-d292-4c81-98d1-46f3c1fd545c 2016-03-30 16:15:35,423 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=2f05c80f-d292-4c81-98d1-46f3c1fd545c, success=true]
+bb414c3b-c6b9-445a-adfe-e25ed5ad9b29 2016-03-30 16:15:51,654 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+6a04a8b4-b535-4169-8982-904b2a24dd3c 2016-03-30 16:15:51,655 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+bb414c3b-c6b9-445a-adfe-e25ed5ad9b29 2016-03-30 16:15:51,656 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+6a04a8b4-b535-4169-8982-904b2a24dd3c 2016-03-30 16:15:51,657 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+6a04a8b4-b535-4169-8982-904b2a24dd3c 2016-03-30 16:15:51,661 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=6a04a8b4-b535-4169-8982-904b2a24dd3c, success=true]
+be4022b1-3450-4490-be88-0e6d6b86ac54 2016-03-30 16:15:51,669 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+be4022b1-3450-4490-be88-0e6d6b86ac54 2016-03-30 16:15:51,671 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+be4022b1-3450-4490-be88-0e6d6b86ac54 2016-03-30 16:15:51,673 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=be4022b1-3450-4490-be88-0e6d6b86ac54, success=true]
+0d54e767-bfab-40c6-97e1-6c0f6df90307 2016-03-30 16:15:53,636 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+0d54e767-bfab-40c6-97e1-6c0f6df90307 2016-03-30 16:15:53,640 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+0d54e767-bfab-40c6-97e1-6c0f6df90307 2016-03-30 16:15:53,641 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=null]
+0d54e767-bfab-40c6-97e1-6c0f6df90307 2016-03-30 16:15:53,646 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=0d54e767-bfab-40c6-97e1-6c0f6df90307, success=true]
+f81b4437-932c-4d4a-b372-e73550ce74fa 2016-03-30 16:15:54,950 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+f81b4437-932c-4d4a-b372-e73550ce74fa 2016-03-30 16:15:54,955 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+f81b4437-932c-4d4a-b372-e73550ce74fa 2016-03-30 16:15:54,956 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+f81b4437-932c-4d4a-b372-e73550ce74fa 2016-03-30 16:15:54,966 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=f81b4437-932c-4d4a-b372-e73550ce74fa, success=true]
+e1af81f9-63b4-49da-80d3-0d17ec0ed297 2016-03-30 16:15:55,001 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+e1af81f9-63b4-49da-80d3-0d17ec0ed297 2016-03-30 16:15:55,007 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e1af81f9-63b4-49da-80d3-0d17ec0ed297 2016-03-30 16:15:55,008 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+e1af81f9-63b4-49da-80d3-0d17ec0ed297 2016-03-30 16:15:55,103 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=e1af81f9-63b4-49da-80d3-0d17ec0ed297, success=true]
+013731ab-7cf9-4adc-bc72-a95e71ef15b3 2016-03-30 16:15:55,785 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+013731ab-7cf9-4adc-bc72-a95e71ef15b3 2016-03-30 16:15:55,788 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+013731ab-7cf9-4adc-bc72-a95e71ef15b3 2016-03-30 16:15:55,788 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=2]
+013731ab-7cf9-4adc-bc72-a95e71ef15b3 2016-03-30 16:15:55,791 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=013731ab-7cf9-4adc-bc72-a95e71ef15b3, success=true]
+17595873-31e7-48c5-97a0-38b2b18da5ed 2016-03-30 16:15:55,846 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+17595873-31e7-48c5-97a0-38b2b18da5ed 2016-03-30 16:15:55,855 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=17595873-31e7-48c5-97a0-38b2b18da5ed, success=false]
+6945e7c6-b77d-450e-97c4-9ec45895e45d 2016-03-30 16:15:56,899 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+6945e7c6-b77d-450e-97c4-9ec45895e45d 2016-03-30 16:15:56,902 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+6945e7c6-b77d-450e-97c4-9ec45895e45d 2016-03-30 16:15:56,902 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+6945e7c6-b77d-450e-97c4-9ec45895e45d 2016-03-30 16:15:56,907 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=6945e7c6-b77d-450e-97c4-9ec45895e45d, success=true]
+145e53db-2d5e-4aba-b6ca-862411b4218a 2016-03-30 16:15:56,931 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+145e53db-2d5e-4aba-b6ca-862411b4218a 2016-03-30 16:15:56,937 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+145e53db-2d5e-4aba-b6ca-862411b4218a 2016-03-30 16:15:56,937 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+145e53db-2d5e-4aba-b6ca-862411b4218a 2016-03-30 16:15:57,033 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=145e53db-2d5e-4aba-b6ca-862411b4218a, success=true]
+22c94a44-1c55-4283-9366-9d2bcdf232d1 2016-03-30 16:16:00,542 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/zk/148
+22c94a44-1c55-4283-9366-9d2bcdf232d1 2016-03-30 16:16:00,545 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/zk/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+22c94a44-1c55-4283-9366-9d2bcdf232d1 2016-03-30 16:16:00,558 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=MachineListVo [datalist=[ZkDisconfDataItem [machine=hanchenglin-PC_0_decb57c1-bb96-42dd-9159-4b55f2c8cb38, value={"auto":"bbdxxjdccd"}, errorList=[]]], errorNum=0, machineSize=1]]
+e453b743-e571-4fca-b47c-3931195a8016 2016-03-30 16:16:10,394 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/12
+e453b743-e571-4fca-b47c-3931195a8016 2016-03-30 16:16:10,398 [http-bio-18080-exec-5] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+e453b743-e571-4fca-b47c-3931195a8016 2016-03-30 16:16:10,417 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=12, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置文件, typeId=0, key=redis.properties, value=redis.host=127.0.0.1
+redis.port=6380, createTime=20140811172327, modifyTime=201603301345]]
+21d9ad3d-bb52-4c5d-af90-840f260076d4 2016-03-30 16:16:23,825 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+719cca59-f6e2-4de5-89c8-d92c606f5724 2016-03-30 16:16:23,825 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+21d9ad3d-bb52-4c5d-af90-840f260076d4 2016-03-30 16:16:23,827 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+719cca59-f6e2-4de5-89c8-d92c606f5724 2016-03-30 16:16:23,827 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+719cca59-f6e2-4de5-89c8-d92c606f5724 2016-03-30 16:16:23,830 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=719cca59-f6e2-4de5-89c8-d92c606f5724, success=true]
+d2629698-5b96-4587-aea5-d2b082d538d9 2016-03-30 16:16:23,834 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+d2629698-5b96-4587-aea5-d2b082d538d9 2016-03-30 16:16:23,836 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+d2629698-5b96-4587-aea5-d2b082d538d9 2016-03-30 16:16:23,839 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=d2629698-5b96-4587-aea5-d2b082d538d9, success=true]
+30fd8d65-897c-4e29-943a-3243ee0f3370 2016-03-30 16:16:26,182 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+30fd8d65-897c-4e29-943a-3243ee0f3370 2016-03-30 16:16:26,187 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+30fd8d65-897c-4e29-943a-3243ee0f3370 2016-03-30 16:16:26,188 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=null]
+30fd8d65-897c-4e29-943a-3243ee0f3370 2016-03-30 16:16:26,194 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=30fd8d65-897c-4e29-943a-3243ee0f3370, success=true]
+7c7d70ab-8d19-42d2-a756-6b9baabb66bc 2016-03-30 16:16:26,857 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+7c7d70ab-8d19-42d2-a756-6b9baabb66bc 2016-03-30 16:16:26,862 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+7c7d70ab-8d19-42d2-a756-6b9baabb66bc 2016-03-30 16:16:26,862 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+7c7d70ab-8d19-42d2-a756-6b9baabb66bc 2016-03-30 16:16:26,868 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=7c7d70ab-8d19-42d2-a756-6b9baabb66bc, success=true]
+76cc2d86-95e8-439f-bc58-d1588aa33c8b 2016-03-30 16:16:26,887 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+76cc2d86-95e8-439f-bc58-d1588aa33c8b 2016-03-30 16:16:26,892 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+76cc2d86-95e8-439f-bc58-d1588aa33c8b 2016-03-30 16:16:26,894 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+76cc2d86-95e8-439f-bc58-d1588aa33c8b 2016-03-30 16:16:26,952 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=76cc2d86-95e8-439f-bc58-d1588aa33c8b, success=true]
+7d260499-717d-4f5e-80df-04347ec7c720 2016-03-30 16:27:03,244 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+7d260499-717d-4f5e-80df-04347ec7c720 2016-03-30 16:27:03,256 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+7d260499-717d-4f5e-80df-04347ec7c720 2016-03-30 16:27:03,259 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=2]
+7d260499-717d-4f5e-80df-04347ec7c720 2016-03-30 16:27:03,266 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=7d260499-717d-4f5e-80df-04347ec7c720, success=true]
+55aacfe6-eb62-4915-b691-be2d3ffd7a14 2016-03-30 16:27:03,291 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+55aacfe6-eb62-4915-b691-be2d3ffd7a14 2016-03-30 16:27:03,295 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=55aacfe6-eb62-4915-b691-be2d3ffd7a14, success=false]
+00255655-5068-4c5d-87f1-edb6ee8c8b00 2016-03-30 16:27:04,001 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+00255655-5068-4c5d-87f1-edb6ee8c8b00 2016-03-30 16:27:04,006 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+00255655-5068-4c5d-87f1-edb6ee8c8b00 2016-03-30 16:27:04,007 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=3]
+00255655-5068-4c5d-87f1-edb6ee8c8b00 2016-03-30 16:27:04,011 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=00255655-5068-4c5d-87f1-edb6ee8c8b00, success=true]
+c173c76b-250b-4cc9-9b8f-d8bb00152416 2016-03-30 16:27:04,038 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+c173c76b-250b-4cc9-9b8f-d8bb00152416 2016-03-30 16:27:04,045 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=c173c76b-250b-4cc9-9b8f-d8bb00152416, success=false]
+4748757e-2a91-4d3d-a2e7-57bc33c9c00a 2016-03-30 16:27:04,398 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+4748757e-2a91-4d3d-a2e7-57bc33c9c00a 2016-03-30 16:27:04,402 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+4748757e-2a91-4d3d-a2e7-57bc33c9c00a 2016-03-30 16:27:04,403 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=4]
+4748757e-2a91-4d3d-a2e7-57bc33c9c00a 2016-03-30 16:27:04,406 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=4748757e-2a91-4d3d-a2e7-57bc33c9c00a, success=true]
+e80c6f76-3984-4951-a12d-6b8fb98ee9ea 2016-03-30 16:27:04,456 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+e80c6f76-3984-4951-a12d-6b8fb98ee9ea 2016-03-30 16:27:04,462 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={field={version=不能为null}}, sessionId=e80c6f76-3984-4951-a12d-6b8fb98ee9ea, success=false]
+629f8890-f1ae-444f-8da5-7b3ade029c97 2016-03-30 16:27:05,001 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+629f8890-f1ae-444f-8da5-7b3ade029c97 2016-03-30 16:27:05,006 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+629f8890-f1ae-444f-8da5-7b3ade029c97 2016-03-30 16:27:05,006 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+629f8890-f1ae-444f-8da5-7b3ade029c97 2016-03-30 16:27:05,011 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=629f8890-f1ae-444f-8da5-7b3ade029c97, success=true]
+a709ce6b-5cc1-421f-b325-ac2cb0260e48 2016-03-30 16:27:05,050 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+a709ce6b-5cc1-421f-b325-ac2cb0260e48 2016-03-30 16:27:05,061 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+a709ce6b-5cc1-421f-b325-ac2cb0260e48 2016-03-30 16:27:05,064 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+a709ce6b-5cc1-421f-b325-ac2cb0260e48 2016-03-30 16:27:05,144 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=a709ce6b-5cc1-421f-b325-ac2cb0260e48, success=true]
+3f35c0a6-2777-46d2-9a7c-dbc9427c832c 2016-03-30 16:27:10,698 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/17
+3f35c0a6-2777-46d2-9a7c-dbc9427c832c 2016-03-30 16:27:10,700 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+3f35c0a6-2777-46d2-9a7c-dbc9427c832c 2016-03-30 16:27:10,710 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonSimpleObject [result=ConfListVo [configId=17, appName=disconf_demo, appId=2, version=1_0_0_0, envId=1, envName=rd, type=配置项, typeId=1, key=staticItem, value=30, createTime=20140814210709, modifyTime=201408142110]]
+0d59a463-b2fd-42d4-989d-481563e2fc3a 2016-03-30 16:28:56,890 [proScheduler-3] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+be41be08-e32e-491d-b8a4-f258763077d1 2016-03-30 16:29:31,396 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+8ab40153-7733-4842-a793-fb9a899622fa 2016-03-30 16:29:31,397 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+be41be08-e32e-491d-b8a4-f258763077d1 2016-03-30 16:29:31,397 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+8ab40153-7733-4842-a793-fb9a899622fa 2016-03-30 16:29:31,398 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+be41be08-e32e-491d-b8a4-f258763077d1 2016-03-30 16:29:31,401 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=be41be08-e32e-491d-b8a4-f258763077d1, success=true]
+8ab40153-7733-4842-a793-fb9a899622fa 2016-03-30 16:29:31,403 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=8ab40153-7733-4842-a793-fb9a899622fa, success=true]
+c5a7ede9-88ef-4997-a259-00a0a9b97489 2016-03-30 16:29:31,418 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+c5a7ede9-88ef-4997-a259-00a0a9b97489 2016-03-30 16:29:31,420 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+067e7ef5-fade-47c7-a7f7-c88ac9571895 2016-03-30 16:29:35,382 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+067e7ef5-fade-47c7-a7f7-c88ac9571895 2016-03-30 16:29:35,387 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+067e7ef5-fade-47c7-a7f7-c88ac9571895 2016-03-30 16:29:35,388 [http-bio-18080-exec-6] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=null]
+067e7ef5-fade-47c7-a7f7-c88ac9571895 2016-03-30 16:29:35,392 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=067e7ef5-fade-47c7-a7f7-c88ac9571895, success=true]
+33c83c13-168b-4ea3-823c-29a4cc0b8633 2016-03-30 16:37:36,757 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+544f8f97-1abc-4ac9-8088-00fa5489d9ca 2016-03-30 16:37:36,757 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+311caae1-c897-49a0-a718-93df2638a746 2016-03-30 16:37:36,757 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+33c83c13-168b-4ea3-823c-29a4cc0b8633 2016-03-30 16:37:36,759 [http-bio-18080-exec-9] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/env/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+544f8f97-1abc-4ac9-8088-00fa5489d9ca 2016-03-30 16:37:36,759 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/app/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+311caae1-c897-49a0-a718-93df2638a746 2016-03-30 16:37:36,759 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObject(result={visitor=VisitorVo [id=6, name=admin, role=null]})
+544f8f97-1abc-4ac9-8088-00fa5489d9ca 2016-03-30 16:37:36,762 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=544f8f97-1abc-4ac9-8088-00fa5489d9ca, success=true]
+33c83c13-168b-4ea3-823c-29a4cc0b8633 2016-03-30 16:37:36,763 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=33c83c13-168b-4ea3-823c-29a4cc0b8633, success=true]
+7d818cbd-8db5-4f18-96a1-10822ed07528 2016-03-30 16:37:38,765 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+7d818cbd-8db5-4f18-96a1-10822ed07528 2016-03-30 16:37:38,769 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+7d818cbd-8db5-4f18-96a1-10822ed07528 2016-03-30 16:37:38,769 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=null]
+7d818cbd-8db5-4f18-96a1-10822ed07528 2016-03-30 16:37:38,773 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=7d818cbd-8db5-4f18-96a1-10822ed07528, success=true]
+57fee5bc-2945-4cea-88c4-7dd0c4c349c9 2016-03-30 16:37:39,745 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+57fee5bc-2945-4cea-88c4-7dd0c4c349c9 2016-03-30 16:37:39,749 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/versionlist/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+57fee5bc-2945-4cea-88c4-7dd0c4c349c9 2016-03-30 16:37:39,750 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - VersionListForm [appId=2, envId=1]
+57fee5bc-2945-4cea-88c4-7dd0c4c349c9 2016-03-30 16:37:39,756 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=57fee5bc-2945-4cea-88c4-7dd0c4c349c9, success=true]
+f95436ca-e2c4-4b6e-9524-1847d14fb76b 2016-03-30 16:37:39,792 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/list
+f95436ca-e2c4-4b6e-9524-1847d14fb76b 2016-03-30 16:37:39,797 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/list/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+f95436ca-e2c4-4b6e-9524-1847d14fb76b 2016-03-30 16:37:39,797 [http-bio-18080-exec-10] INFO  com.baidu.disconf.web.web.config.controller.ConfigReadController - ConfListForm(appId=2, version=1_0_0_0, envId=1)
+f95436ca-e2c4-4b6e-9524-1847d14fb76b 2016-03-30 16:37:39,878 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={}, sessionId=f95436ca-e2c4-4b6e-9524-1847d14fb76b, success=true]
+5ecbd1c8-650c-41f7-b5de-0353a39ab10c 2016-03-30 16:37:53,637 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/download/148
+5ecbd1c8-650c-41f7-b5de-0353a39ab10c 2016-03-30 16:37:53,640 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.service.roleres.service.RoleResourceAspect - Accessing URL:/api/web/config/download/{configId}/, method:GET, UserId:6, RoleId:2, Is priviledged:true
+06a8126d-99f1-46f4-8b45-138318611f9b 2016-03-30 16:55:50,860 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/hosts
+de8f3671-5c38-4553-b199-cb02f197808a 2016-03-30 16:55:50,930 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/prefix
+071ff63f-4327-4262-801a-80261092d725 2016-03-30 16:55:55,827 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+3342f235-8f75-4abd-aaf8-eea4b62f62a1 2016-03-30 16:55:55,898 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+be2d3587-9738-475b-8947-3b33f5b72945 2016-03-30 16:55:55,939 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+81e79a12-b731-4393-b6d6-b871e9d01b7b 2016-03-30 16:55:55,979 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+1dd26875-dfe3-4c0d-838c-d2f02c5f8812 2016-03-30 16:55:56,064 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+b017193b-19b3-454f-be6a-adea656ce3ee 2016-03-30 16:55:56,100 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+dc1e68f4-4461-47fb-86bb-5ec4b0b1340e 2016-03-30 16:55:56,134 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+8460ed5b-730a-471a-b548-1f691e876c35 2016-03-30 16:55:56,194 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+8460ed5b-730a-471a-b548-1f691e876c35 2016-03-30 16:55:56,198 [http-bio-18080-exec-3] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=staticItem]
+46961918-b3dc-4790-96a5-f19282c3a101 2016-03-30 16:55:56,232 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+46961918-b3dc-4790-96a5-f19282c3a101 2016-03-30 16:55:56,234 [http-bio-18080-exec-2] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=moneyInvest]
+10eef405-d68d-4b85-83e4-dfd36e53e417 2016-03-30 16:55:56,267 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+10eef405-d68d-4b85-83e4-dfd36e53e417 2016-03-30 16:55:56,269 [http-bio-18080-exec-4] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=discountRate]
+a2ff5fd1-167b-4f54-a69e-9fd69fa4b2ce 2016-03-30 16:55:56,385 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+4990ad36-214c-4831-99aa-6ecd3870c73b 2016-03-30 16:55:56,421 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+0fb891f8-e15b-4321-9403-142e752810ec 2016-03-30 16:55:56,457 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+d983300e-0677-4f72-8039-1c5e2597d73e 2016-03-30 16:55:56,504 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+def9cb02-b5c7-438a-8ac7-dbcf3beb8699 2016-03-30 16:55:56,542 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+9fe4ca0d-15e9-42c8-9c0b-4bedf9ca791e 2016-03-30 16:59:06,984 [proScheduler-3] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+35b895bd-8c4d-4417-8969-ab5a532a7445 2016-03-30 17:14:30,283 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+35b895bd-8c4d-4417-8969-ab5a532a7445 2016-03-30 17:14:30,284 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=35b895bd-8c4d-4417-8969-ab5a532a7445, success=false]
+2eff23ea-3c76-4ee2-bfea-eab20520df15 2016-03-30 17:14:30,765 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+2eff23ea-3c76-4ee2-bfea-eab20520df15 2016-03-30 17:14:30,766 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=2eff23ea-3c76-4ee2-bfea-eab20520df15, success=false]
+f73a7920-6c6a-4aa4-bb96-e9e50a3cdd9e 2016-03-30 17:15:07,001 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+f73a7920-6c6a-4aa4-bb96-e9e50a3cdd9e 2016-03-30 17:15:07,002 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=f73a7920-6c6a-4aa4-bb96-e9e50a3cdd9e, success=false]
+81843b2b-b9de-4e68-9bf1-58b2349a6051 2016-03-30 17:15:07,414 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+81843b2b-b9de-4e68-9bf1-58b2349a6051 2016-03-30 17:15:07,415 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=81843b2b-b9de-4e68-9bf1-58b2349a6051, success=false]
+b25dc307-3d07-4f44-9ebf-b931e8a444c0 2016-03-30 17:15:07,749 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+b25dc307-3d07-4f44-9ebf-b931e8a444c0 2016-03-30 17:15:07,750 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=b25dc307-3d07-4f44-9ebf-b931e8a444c0, success=false]
+07e9714a-2c9e-4a16-8527-7aea816bc086 2016-03-30 17:15:08,295 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+07e9714a-2c9e-4a16-8527-7aea816bc086 2016-03-30 17:15:08,296 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=07e9714a-2c9e-4a16-8527-7aea816bc086, success=false]
+16923dcd-8ff0-4e6b-bedd-65fc28ec5bed 2016-03-30 17:15:08,644 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+16923dcd-8ff0-4e6b-bedd-65fc28ec5bed 2016-03-30 17:15:08,645 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=16923dcd-8ff0-4e6b-bedd-65fc28ec5bed, success=false]
+b1e5eb55-b1e0-480c-9157-64a1996e6014 2016-03-30 17:15:08,978 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+b1e5eb55-b1e0-480c-9157-64a1996e6014 2016-03-30 17:15:08,979 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=b1e5eb55-b1e0-480c-9157-64a1996e6014, success=false]
+88014f63-b67a-4a6e-ba42-6d853f278d6b 2016-03-30 17:15:09,295 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+88014f63-b67a-4a6e-ba42-6d853f278d6b 2016-03-30 17:15:09,297 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=88014f63-b67a-4a6e-ba42-6d853f278d6b, success=false]
+a4abf068-5ff7-4380-879d-462cd108ecc9 2016-03-30 17:15:09,572 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+a4abf068-5ff7-4380-879d-462cd108ecc9 2016-03-30 17:15:09,573 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=a4abf068-5ff7-4380-879d-462cd108ecc9, success=false]
+45461e10-d2e2-43a2-8b7a-fe0caff5bff7 2016-03-30 17:15:10,028 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+45461e10-d2e2-43a2-8b7a-fe0caff5bff7 2016-03-30 17:15:10,029 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=45461e10-d2e2-43a2-8b7a-fe0caff5bff7, success=false]
+898ed4d9-ee52-4816-80d1-2fc0b9bf47bc 2016-03-30 17:17:06,369 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/zk/148
+898ed4d9-ee52-4816-80d1-2fc0b9bf47bc 2016-03-30 17:17:06,371 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=898ed4d9-ee52-4816-80d1-2fc0b9bf47bc, success=false]
+45b2ad34-82c7-4105-bd8d-c35cb76cf99f 2016-03-30 17:19:51,886 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/download/148
+45b2ad34-82c7-4105-bd8d-c35cb76cf99f 2016-03-30 17:19:51,887 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=45b2ad34-82c7-4105-bd8d-c35cb76cf99f, success=false]
+9efca875-b41f-4069-8dc6-b58091929f1a 2016-03-30 17:22:59,559 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+9efca875-b41f-4069-8dc6-b58091929f1a 2016-03-30 17:22:59,560 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=9efca875-b41f-4069-8dc6-b58091929f1a, success=false]
+aa9557db-1987-4dd3-9349-1142568c463f 2016-03-30 17:23:00,508 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/web/config/versionlist
+aa9557db-1987-4dd3-9349-1142568c463f 2016-03-30 17:23:00,509 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=aa9557db-1987-4dd3-9349-1142568c463f, success=false]
+bdf1ea80-9bef-4b59-bfe3-fc871a7df5a5 2016-03-30 17:23:06,012 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/app/list
+03c6ecdc-6e02-4900-9dd7-e5a591b49c86 2016-03-30 17:23:06,013 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+bdf1ea80-9bef-4b59-bfe3-fc871a7df5a5 2016-03-30 17:23:06,014 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=bdf1ea80-9bef-4b59-bfe3-fc871a7df5a5, success=false]
+03c6ecdc-6e02-4900-9dd7-e5a591b49c86 2016-03-30 17:23:06,014 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=03c6ecdc-6e02-4900-9dd7-e5a591b49c86, success=false]
+affdc3fc-a77f-4100-8dd8-9f5756c76346 2016-03-30 17:23:06,014 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/env/list
+affdc3fc-a77f-4100-8dd8-9f5756c76346 2016-03-30 17:23:06,015 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=affdc3fc-a77f-4100-8dd8-9f5756c76346, success=false]
+b863d248-1aa6-44ba-b07b-7fcf4d97ecbe 2016-03-30 17:23:06,348 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/account/session
+b863d248-1aa6-44ba-b07b-7fcf4d97ecbe 2016-03-30 17:23:06,349 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.vo.JsonObjectUtils - JsonObjectBase [message={global=请登录系统}, sessionId=b863d248-1aa6-44ba-b07b-7fcf4d97ecbe, success=false]
+5e30f5be-9152-4807-9ac7-8926da6aee3a 2016-03-30 17:29:17,057 [proScheduler-3] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+ac1cac21-c77b-4511-b407-0c36ee987508 2016-03-30 17:36:51,662 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/hosts
+540b7fe2-2c74-47fd-8122-fe30b21f01d1 2016-03-30 17:36:51,745 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/zoo/prefix
+1836a835-0bf5-4171-b669-8e0e2c904454 2016-03-30 17:36:56,662 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+c10342c2-bb37-4b03-b7e5-1cc4163295b7 2016-03-30 17:36:56,739 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+6712b579-c770-4e16-8712-5d8599750ba6 2016-03-30 17:36:56,778 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+984b56c4-1173-4760-ab1e-aaf49acbaf88 2016-03-30 17:36:56,839 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+e9e28a6e-f9ff-4559-a5d7-3f0dc4f3cda2 2016-03-30 17:36:56,888 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+2d5638e0-e14c-4189-8b25-25b8ded830c3 2016-03-30 17:36:56,937 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+ae1f8f1a-67cd-4509-b98d-7016db3be513 2016-03-30 17:36:56,976 [http-bio-18080-exec-6] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+d3bf28ed-11bb-4446-8eae-757e0491892b 2016-03-30 17:36:57,026 [http-bio-18080-exec-7] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+d3bf28ed-11bb-4446-8eae-757e0491892b 2016-03-30 17:36:57,028 [http-bio-18080-exec-7] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=staticItem]
+2b263a27-9cba-47c8-a14b-f0b53183c6b0 2016-03-30 17:36:57,058 [http-bio-18080-exec-8] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+2b263a27-9cba-47c8-a14b-f0b53183c6b0 2016-03-30 17:36:57,060 [http-bio-18080-exec-8] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=moneyInvest]
+45e72cfa-176e-4503-a856-9968b21f480b 2016-03-30 17:36:57,109 [http-bio-18080-exec-1] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/item
+45e72cfa-176e-4503-a856-9968b21f480b 2016-03-30 17:36:57,112 [http-bio-18080-exec-1] INFO  com.baidu.disconf.web.web.config.controller.ConfigFetcherController - ConfForm [app=disconf_demo, maintype=null, version=1_0_0_0, env=rd, key=discountRate]
+b22c9963-68ef-4168-9998-ad02419a5b4e 2016-03-30 17:36:57,241 [http-bio-18080-exec-10] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+9ed5a7e8-8011-4812-a026-820a71ae214b 2016-03-30 17:36:57,281 [http-bio-18080-exec-3] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+60977b19-f8e8-40ca-bce0-c428855530e9 2016-03-30 17:36:57,313 [http-bio-18080-exec-2] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+4899733b-c072-4fef-a9fb-c5c9db3c828d 2016-03-30 17:36:57,354 [http-bio-18080-exec-4] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+9e9e8c47-1104-4c68-8a38-f8aa991ababa 2016-03-30 17:36:57,390 [http-bio-18080-exec-5] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+3a95058c-e0a9-4fe6-a805-9225fa2c2268 2016-03-30 17:36:57,449 [http-bio-18080-exec-9] INFO  com.baidu.dsp.common.interceptor.login.LoginInterceptor - /api/config/file
+e83148fa-53a9-4ac7-97e7-18d756d36bdf 2016-03-30 17:59:27,119 [proScheduler-3] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+c8bfb7b8-c798-42d7-9e04-72e785c18562 2016-03-30 18:29:37,272 [proScheduler-3] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+8cce089c-11d4-480f-9910-ffb5c2c7371e 2016-03-30 18:59:47,364 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+6a9da11e-818e-44a7-80d8-9b4f30f24c3f 2016-03-30 19:29:57,435 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+dd260db4-a432-43f9-8b3e-55b28c42ad5d 2016-03-30 20:00:07,540 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+c82619f3-d22a-4e2a-9caa-2f718a1fba78 2016-03-30 20:30:17,614 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+2d92bde3-fd46-438a-b2d7-a83c35c6c02e 2016-03-30 21:00:27,678 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+f0e9f76b-e470-4ec9-9b6f-8ed46a924cef 2016-03-30 21:30:37,742 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+4396e280-3f50-4b22-932a-5bba01d159fc 2016-03-30 22:00:47,808 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+6c5c4022-7b9c-4b60-96ed-f383fef12e97 2016-03-30 22:30:57,948 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+2841a962-bb28-4642-aaee-c60f2594149e 2016-03-30 23:01:08,029 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
+7f07fc80-f4a1-4207-81c8-e751de90838d 2016-03-30 23:31:18,094 [proScheduler-8] INFO  com.baidu.disconf.web.tasks.impl.ConfigConsistencyMonitorServiceImpl - monitor disconf_demo	rd	1_0_0_0
